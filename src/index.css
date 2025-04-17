@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #f2f4f8;
+}
+
+#root {
+  margin: auto;
+  width: 100%;
+  min-height: 1000px;
+}
+
+.edu-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f80057, #db002f);
+  color: white;
+}
+
+.score-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ff007a;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 8px rgba(248, 0, 87, 0.3);
+}
+.nav-link.active {
+  background-color: #f80057 !important;
+  color: white !important;
+}
+
+/* Animated Progress */
+
+.progress.gradient-bar {
+  height: 10px;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(to right, #ffffff, #f80057);
+  height: 100%;
+  transition: width 1.5s ease-in-out;
+  border-radius: 10px;
+}
