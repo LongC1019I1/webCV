@@ -38,14 +38,23 @@ function App() {
             <div className="flex-grow-1">
               <h4 className="fw-bold mb-0">Md Alamin Bali</h4>
               <p className="text-muted mb-1">I am a Technician</p>
-              <div className="d-flex gap-2">
-                <button className="btn btn-light shadow-sm">
+              <div className="d-flex gap-2 mt-3">
+                <button
+                  className=" edu-card  btn btn-light shadow-sm"
+                  style={{ color: "#878e99" }}
+                >
                   <FaFacebookF />
                 </button>
-                <button className="btn btn-danger shadow-sm">
+                <button
+                  className="edu-card  btn btn-light shadow-sm mx-3"
+                  style={{ color: "#878e99" }}
+                >
                   <FaInstagram />
                 </button>
-                <button className="btn btn-light shadow-sm">
+                <button
+                  className=" edu-card btn btn-light shadow-sm"
+                  style={{ color: "#878e99" }}
+                >
                   <FaLinkedinIn />
                 </button>
               </div>
