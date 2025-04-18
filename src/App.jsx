@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
 import bg from "./assets/img/bg-image-9.webp";
 import MyPage from "./Pages/MyPage";
+import Work from "./Pages/Work";
 import Resume from "./Pages/Resume";
 
 import {
@@ -15,7 +16,6 @@ import {
 function App() {
   return (
     <div className="App bg-light pb-5">
-     
       {/* Header */}
       <div className="position-relative">
         <img
@@ -104,11 +104,20 @@ function App() {
                 >
                   Resume
                 </NavLink>
-                <a className="nav-link text-dark" href="#">
-                  Work
-                </a>
                 <NavLink
-                  to="/"
+                  to="/work"
+                  className={({ isActive }) =>
+                    `nav-link ${
+                      isActive
+                        ? "active bg-danger text-white rounded"
+                        : "text-dark"
+                    }`
+                  }
+                >
+                  Work
+                </NavLink>
+                <NavLink
+                  to="/blog"
                   className={({ isActive }) =>
                     `nav-link ${
                       isActive
@@ -130,7 +139,9 @@ function App() {
           <div className="col-md-10 rounded bg-white">
             <Routes>
               <Route path="/" element={<MyPage />} />
+              <Route path="/blog" element={<MyPage />} />
               <Route path="/resume" element={<Resume />} />
+              <Route path="/work" element={<Work />} />
             </Routes>
           </div>
         </div>
