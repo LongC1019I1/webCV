@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCategories } from "./store/categorySlice";
+import { fetchPostsByCategory } from "./store/postSlice";
 import bg from "./assets/img/bg-image-9.webp";
 import MyPage from "./Pages/MyPage";
 import Work from "./Pages/Work";
@@ -14,6 +16,14 @@ import {
 } from "react-icons/fa";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCategories());
+    dispatch(fetchPostsByCategory(6));
+    dispatch(fetchPostsByCategory(7));
+  }, [dispatch]);
+
   return (
     <div className="App bg-light pb-5">
       {/* Header */}
@@ -139,9 +149,9 @@ function App() {
           <div className="col-md-10 rounded bg-white">
             <Routes>
               <Route path="/" element={<MyPage />} />
-              <Route path="/blog" element={<MyPage />} />
+              <Route path="/blog" element={<MyPage id={6}  />} />
               <Route path="/resume" element={<Resume />} />
-              <Route path="/work" element={<Work />} />
+              <Route path="/work" element={<MyPage id={7} />} />
             </Routes>
           </div>
         </div>

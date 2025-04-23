@@ -14,11 +14,28 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.no-wrap {
+  display: block;
+  white-space: nowrap;
+  /* Không cho xuống dòng */
+  overflow: hidden;
+  /* Ẩn phần bị tràn */
+  /* text-overflow: ellipsis; */
+  /* Thêm dấu ... */
+  max-width: 100%;
+  /* Giới hạn chiều rộng */
+  display: inline-block;
+  /* Để các thuộc tính trên hoạt động */
+  cursor: pointer;
+  /* Cho cảm giác có thể tương tác */
+}
+
 .pointer {
   cursor: pointer;
 }
 
-.main-color{
+.main-color {
   color: #db002f;
 }
 
@@ -79,7 +96,9 @@ body {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  overflow: hidden;
   transition: opacity 0.4s ease;
+  
 }
 
 .modal-overlay.fade-in {
@@ -97,9 +116,11 @@ body {
   max-width: 1000px;
   width: 90%;
   position: relative;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   padding: 1.5rem;
+  max-height: 90vh; /* 👈 Giới hạn chiều cao modal */
+  overflow-y: auto;
 }
 
 @media (min-width: 768px) {
