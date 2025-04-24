@@ -1,0 +1,34 @@
+/* ZOOM IMAGE */
+.zoom-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-image {
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.zoom-container:hover .zoom-image {
+  transform: scale(1.03); /* zoom 120% */
+}
+
+/* OTHER TIP */
+.pointer {
+  cursor: pointer;
+}
+
+.color_main {
+    color: #db002f;
+}
+
+.main-color {
+  color: #db002f;
+}
+
+.main-color:hover {
+  background: linear-gradient(135deg, #f80057, #db002f);
+  color: white !important;
+  transition-duration: 0.1s;
+}

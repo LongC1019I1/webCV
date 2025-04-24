@@ -99,9 +99,7 @@ function App() {
           <div className="col-md-2 mb-4">
             <div className="bg-white rounded shadow p-3">
               <nav className="nav flex-column gap-2">
-                <a className="nav-link text-dark" href="#">
-                  About
-                </a>
+           
                 <NavLink
                   to="/resume"
                   className={({ isActive }) =>
@@ -112,7 +110,7 @@ function App() {
                     }`
                   }
                 >
-                  Resume
+                  About
                 </NavLink>
                 <NavLink
                   to="/work"
