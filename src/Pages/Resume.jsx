@@ -2,6 +2,7 @@ import React from "react";
 import AnimatedProgress from "../components/AnimatedProgress";
 import my_img from "../assets/img/my_img.jpg";
 import { FaPeopleGroup, FaCrown } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
 import parse from "html-react-parser";
 const skills = {
@@ -49,8 +50,9 @@ Thiết kế, xây dựng và quản trị website </p>
     highlight: false,
   },
   {
-    title: "CHƯƠNG TRÌNH ĐÀO TẠO TƯ VẤN VÀ HUẤN LUYỆN NỘI TÂM - MENTOR WIT",
-    subtitle: "07/2022 – 3/2023",
+    title:
+      "CHƯƠNG TRÌNH ĐÀO TẠO TƯ VẤN VÀ </br> HUẤN LUYỆN NỘI TÂM - MENTOR WIT",
+    subtitle: "Công ty CP Tổ Chức Đào Tạo WIT (07/2022 – 3/2023)",
     description: `<section>
   <h2>Kỹ năng & Năng lực đạt được (Mentor WiT)</h2>
   <ul>
@@ -145,17 +147,28 @@ const ExperienceSkills = () => {
             <p className="text-uppercase text-danger fw-bold small">
               Visit my portfolio & hire me
             </p>
-            <h2>About Me</h2>
+            <h2 className="d-flex mb-3">
+              <FaUser className="mr-3" />
+              About Me
+            </h2>
             <p className="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum in
-              eos saepe ipsa cupiditate accusantium voluptatibus quidem nam,
-              reprehenderit, et necessitatibus adipisci.
+              Tôi là một Lập trình viên Fullstack với kinh nghiệm hơn 3 năm
+              trong việc phát triển hệ thống Web App cả Frontend và Backend. Tôi
+              từng làm việc tại công ty công nghệ nhà thông minh Lumi, tham gia
+              phát triển API, thiết kế hệ thống backend, và xây dựng ứng dụng
+              desktop web. Đồng thời, tôi còn có kinh nghiệm kinh doanh tự do và
+              điều phối cộng đồng, giúp tôi phát triển kỹ năng giao tiếp, làm
+              việc nhóm và tư duy tổ chức theo mô hình Scrum.
             </p>
-            <ul className="list-unstyled text-muted">
-              <li>✔ Web Design Full stack</li>
-              <li>✔ 24/7 Support</li>
-              <li>✔ Unlimited Revisions</li>
-            </ul>
+            <p className="text-muted">
+              Tôi đam mê công nghệ, yêu thích khám phá nội tâm con người, và
+              luôn hướng đến việc xây dựng đội ngũ vững mạnh – cả về chuyên môn
+              lẫn văn hóa.
+            </p>
+            <blockquote>
+              <strong>🌱 Triết lý làm việc:</strong> Xây giá trị thật – Cùng
+              phát triển thật.
+            </blockquote>
             <button className=" edu-card  bg-light btn  mt-3 shadow">
               Download My CV
             </button>
@@ -171,19 +184,48 @@ const ExperienceSkills = () => {
                 <div className="mb-3 text-danger fs-2">
                   <i className="bi bi-pencil-square"></i>
                 </div>
-                <h6 className="fw-bold">
-                  <div className="d-flex justify-center mb-4 w-100 ">
-                    <FaPeopleGroup className="w-100 color_main pointer display-6" />
-                  </div>
+                <div className="d-flex justify-center mb-2 w-100 ">
+                  <FaPeopleGroup className="w-100 color_main pointer display-6" />
+                </div>
 
-                  <div className="mb-1  align-items-center gap-1">
-                    QUẢN LÝ <FaCrown className="d-inline mb-1" />{" "}
-                  </div>
-                  <div>XÂY DỰNG VĂN HÓA ĐỘI NHÓM</div>
-                </h6>
-                <p className="text-muted">
-                  {" "}
-                  Scrum + DISC/Thần số học + Đam mê phát triển con người
+                <div className="title-area text-center fw-bold">
+                  QUẢN LÝ <FaCrown className="d-inline mb-1" /> <br />
+                  XÂY DỰNG VĂN HÓA ĐỘI NHÓM
+                </div>
+
+                <p className="mb-3 text-muted" style={{ textAlign: "justify" }}>
+                  Tôi không chỉ vận hành đội ngũ theo phương pháp{" "}
+                  <strong>Agile/Scrum</strong>, mà còn kết hợp những công cụ
+                  khám phá con người như <strong>DISC</strong> và{" "}
+                  <strong>Thần số học</strong> để hiểu sâu từng cá nhân. Từ đó
+                  tôi thiết kế văn hóa đội nhóm phù hợp và nuôi dưỡng động lực
+                  từ bên trong.
+                </p>
+
+                <p className="mb-3 text-muted" style={{ textAlign: "justify" }}>
+                  Tôi tin rằng{" "}
+                  <em>đội ngũ mạnh không đến từ quy trình cứng nhắc</em>, mà từ
+                  <strong>
+                    {" "}
+                    sự thấu hiểu – kết nối – và phát triển bền vững{" "}
+                  </strong>{" "}
+                  giữa con người với nhau.
+                </p>
+
+                <p
+                  className="text-muted mt-4"
+                  style={{ fontStyle: "italic", textAlign: "justify" }}
+                >
+                  <span style={{ fontWeight: 500 }}>
+                    Công nghệ giúp tối ưu công việc – Còn hiểu con người giúp
+                    đội ngũ vươn xa.
+                  </span>{" "}
+                  Đó là lý do tôi luôn chọn đồng hành cùng con người, không chỉ
+                  để hoàn thành mục tiêu, mà để cùng nhau{" "}
+                  <span className="text-danger">
+                    chuyển hóa và trưởng thành
+                  </span>
+                  .
                 </p>
               </div>
             </div>
@@ -193,13 +235,34 @@ const ExperienceSkills = () => {
                   <i className="bi bi-display"></i>
                 </div>
 
-                <div className="d-flex justify-center mb-4 w-100  ">
+                <div className="d-flex justify-center mb-2 w-100  ">
                   <MdWeb className="w-100 color_main pointer display-6" />
                 </div>
-                <h6 className="fw-bold" style={{ height: "40px" }}>
+
+                <div className="title-area text-center fw-bold">
                   Lập trình Web Fullstack
-                </h6>
-                <p className="text-muted">Fullstack Web Frontend & Backend</p>
+                </div>
+
+                <p className="mb-2 text-muted" style={{ textAlign: "justify" }}>
+                  Tôi có hơn 3 năm kinh nghiệm phát triển Web App với khả năng
+                  đảm nhiệm cả <strong>frontend</strong> và{" "}
+                  <strong>backend</strong>, từng xây dựng API, giao diện và hệ
+                  thống backend phục vụ điều khiển thiết bị tại công ty Lumi.
+                </p>
+
+                <p className="mb-2 text-muted" style={{ textAlign: "justify" }}>
+                  Am hiểu <strong>RESTful API</strong>,{" "}
+                  <strong>MySQL / PostgreSQL / MongoDB</strong>, có kinh nghiệm
+                  sử dụng <strong>MQTT, RabbitMQ, Kafka</strong>, và làm việc
+                  với{" "}
+                  <strong>PHP (Yii2), Node.js, JavaScript, LEMP stack</strong>{" "}
+                  trên môi trường <strong>Linux</strong>.
+                </p>
+
+                <p style={{ fontStyle: "italic", color: "#888" }}>
+                  Lập trình không chỉ là viết mã – mà là giải pháp tối ưu, tạo
+                  trải nghiệm tốt và xây dựng giá trị bền vững.
+                </p>
               </div>
             </div>
           </div>

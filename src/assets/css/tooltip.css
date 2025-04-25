@@ -20,7 +20,7 @@
 }
 
 .color_main {
-    color: #db002f;
+  color: #db002f;
 }
 
 .main-color {
@@ -31,4 +31,7 @@
   background: linear-gradient(135deg, #f80057, #db002f);
   color: white !important;
   transition-duration: 0.1s;
+}
+.title-area {
+  min-height: 60px;
 }
