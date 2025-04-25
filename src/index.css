@@ -2,10 +2,16 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  --color-body: #212428;
+  --color-body: #f2f4f8; /* Nền tối đẹp */
+  --color-card: #ff014f; /* Xanh đậm cho card, hover */
+  --color-accent: #f80057; /* Accent nổi bật */
+  
+  --color-text-main: #8b8b8b; /* Chữ chính */
+  --color-text-muted: #bbbbbb; /* Chữ phụ mờ */
+  /* background: linear-gradient(135deg, #f80057, #db002f); */
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--color-body);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,6 +21,7 @@
 
 @import "tailwindcss";
 @import "./assets/css/tooltip.css";
+@import "./assets/css/modal.css";
 .no-wrap {
   display: block;
   white-space: nowrap;
@@ -32,7 +39,11 @@
 }
 
 body {
-  background-color: var(--color-body)
+  background-color: var(--color-body);
+  
+}
+.text-muted {
+  color: var(--color-text-muted);
 }
 
 #root {
@@ -50,7 +61,7 @@ body {
   /* transform: translateY(-5px); */
   transition-duration: 0.3s;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #13385e, #13385e);
+  background: linear-gradient(135deg, #f80057, #db002f);
   color: white !important;
   cursor: pointer;
 
@@ -64,89 +75,20 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: #13385e;
-  color: white;
   padding: 6px 12px;
   border-radius: 8px;
   font-size: 0.8rem;
+  background: var(--color-card);
+  color: white;
   box-shadow: 0 4px 8px rgba(248, 0, 87, 0.3);
 }
 .nav-link.active {
-  background-color: #13385e !important;
+  background-color: var(--color-card) !important;
+  color: var(--color-text-main) !important;
   color: white !important;
 }
 
-/* Modal */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(236 240 243 / 90%);
-  z-index: 1050;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity 0.4s ease;
-}
 
-.modal-overlay.fade-in {
-  opacity: 1;
-}
-
-.modal-overlay.fade-out {
-  opacity: 0;
-}
-
-.modal-content-custom {
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  max-width: 1000px;
-  width: 90%;
-  position: relative;
-  /* display: flex; */
-  flex-direction: column;
-  padding: 1.5rem;
-  max-height: 90vh; /* 👈 Giới hạn chiều cao modal */
-  overflow-y: auto;
-}
-
-@media (min-width: 768px) {
-  .modal-content-custom {
-    flex-direction: row;
-  }
-}
-
-.modal-image {
-  flex: 1;
-  margin-right: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-  .modal-image {
-    margin-bottom: 0;
-  }
-}
-
-.modal-details {
-  flex: 2;
-}
-
-.close-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #f8f9fa;
-  border: none;
-  border-radius: 50%;
-  padding: 0.5rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-}
 /* Animated Progress */
 
 .progress.gradient-bar {
@@ -157,7 +99,7 @@ body {
 }
 
 .progress-bar {
-  background: linear-gradient(to right, #ffffff, #13385e);
+  background: linear-gradient(to right, #ffffff, #f80057);
   height: 100%;
   transition: width 1.5s ease-in-out;
   border-radius: 10px;

@@ -19,22 +19,22 @@
   cursor: pointer;
 }
 
+/* Main color settings */
 .color_main {
-  color: #13385e;
+  color: var(--color-card);
 }
 
 .main-color {
-  color: #13385e;
+  color: var(--color-card);
 }
 
 .main-color:hover {
-  background: linear-gradient(135deg, #13385e, #13385e);
-  color: white !important;
+  background: linear-gradient(135deg, var(--color-card), var(--color-card));
+  color: var(--color-text-main) !important;
   transition-duration: 0.1s;
 }
+
+
 .title-area {
   min-height: 60px;
-}
-.text-danger{
-  color: #13385e !important;
 }
