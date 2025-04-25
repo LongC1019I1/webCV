@@ -25,7 +25,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="App bg-light pb-5">
+    <div className="App pb-5">
       {/* Header */}
       <div className="position-relative">
         <img

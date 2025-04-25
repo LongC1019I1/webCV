@@ -54,8 +54,8 @@ Thiết kế, xây dựng và quản trị website </p>
       "CHƯƠNG TRÌNH ĐÀO TẠO TƯ VẤN VÀ </br> HUẤN LUYỆN NỘI TÂM - MENTOR WIT",
     subtitle: "Công ty CP Tổ Chức Đào Tạo WIT (07/2022 – 3/2023)",
     description: `<section>
-  <h2>Kỹ năng & Năng lực đạt được (Mentor WiT)</h2>
-  <ul>
+  <h5>Kỹ năng & Năng lực đạt được (Mentor WiT)</h5>
+ 
     <li>Kỹ năng Tư vấn & Huấn luyện cá nhân và đội nhóm</li>
     <li>Kỹ năng giao tiếp và truyền cảm hứng sâu sắc</li>
     <li>Năng lực thấu hiểu và dẫn dắt nội tâm con người</li>
@@ -64,10 +64,10 @@ Thiết kế, xây dựng và quản trị website </p>
     <li>Kỹ năng huấn luyện thể chất: chạy bền 21km trên cát, bơi biển 2km</li>
     <li>Năng lực quản trị toàn diện 4 lĩnh vực:
       <ul>
-        <li>Nội tâm</li>
-        <li>Sức khỏe</li>
-        <li>Mối quan hệ</li>
-        <li>Tài chính</li>
+        <li>* Nội tâm</li>
+        <li>* Sức khỏe</li>
+        <li>* Mối quan hệ</li>
+        <li>* Tài chính</li>
       </ul>
     </li>
    

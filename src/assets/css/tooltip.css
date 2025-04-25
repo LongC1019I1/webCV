@@ -20,18 +20,21 @@
 }
 
 .color_main {
-  color: #db002f;
+  color: #13385e;
 }
 
 .main-color {
-  color: #db002f;
+  color: #13385e;
 }
 
 .main-color:hover {
-  background: linear-gradient(135deg, #f80057, #db002f);
+  background: linear-gradient(135deg, #13385e, #13385e);
   color: white !important;
   transition-duration: 0.1s;
 }
 .title-area {
   min-height: 60px;
+}
+.text-danger{
+  color: #13385e !important;
 }

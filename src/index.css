@@ -2,7 +2,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  --color-body: #212428;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -31,11 +31,8 @@
   /* Cho cảm giác có thể tương tác */
 }
 
-
-
-
 body {
-  background-color: #f2f4f8;
+  background-color: var(--color-body)
 }
 
 #root {
@@ -50,18 +47,24 @@ body {
 }
 
 .edu-card:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
   transition-duration: 0.3s;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #f80057, #db002f);
+  background: linear-gradient(135deg, #13385e, #13385e);
   color: white !important;
+  cursor: pointer;
+
+  .text-muted {
+    transition-duration: 0.3s;
+    color: white !important;
+  }
 }
 
 .score-badge {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: #ff007a;
+  background: #13385e;
   color: white;
   padding: 6px 12px;
   border-radius: 8px;
@@ -69,7 +72,7 @@ body {
   box-shadow: 0 4px 8px rgba(248, 0, 87, 0.3);
 }
 .nav-link.active {
-  background-color: #f80057 !important;
+  background-color: #13385e !important;
   color: white !important;
 }
 
@@ -154,7 +157,7 @@ body {
 }
 
 .progress-bar {
-  background: linear-gradient(to right, #ffffff, #f80057);
+  background: linear-gradient(to right, #ffffff, #13385e);
   height: 100%;
   transition: width 1.5s ease-in-out;
   border-radius: 10px;
