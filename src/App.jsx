@@ -7,7 +7,7 @@ import bg from "./assets/img/bg-image-9.webp";
 import MyPage from "./Pages/MyPage";
 import Work from "./Pages/Work";
 import Resume from "./Pages/Resume";
-
+import logo from "./assets//img/logo.png";
 import {
   FaFacebookF,
   FaInstagram,
@@ -27,50 +27,58 @@ function App() {
   return (
     <div className="App pb-5">
       {/* Header */}
-      <div className="position-relative">
+      <div className="">
         <img
           src={bg}
           className="img-fluid w-100 "
           style={{ height: "300px" }}
           alt="header"
         />
-        <div
-          className="container position-absolute  start-50  translate-middle-x"
-          style={{ top: "205px" }}
-        >
-          <div className="bg-white rounded shadow d-flex align-items-center p-4 gap-4 flex-wrap">
-            <img
-              src="https://i.ibb.co/ZGN7fqX/avatar.png"
-              className="rounded-circle border border-3"
-              width="100"
-              height="100"
-              alt="avatar"
-            />
-            <div className="flex-grow-1">
-              <h4 className="fw-bold mb-0">Md Alamin Bali</h4>
-              <p className="text-muted mb-1">I am a Technician</p>
-              <div className="d-flex gap-2 mt-3">
-                <button
-                  className=" edu-card  btn btn-light shadow-sm"
-                  style={{ color: "#878e99" }}
-                >
-                  <FaFacebookF />
-                </button>
-                <button
-                  className="edu-card  btn btn-light shadow-sm mx-3"
-                  style={{ color: "#878e99" }}
-                >
-                  <FaInstagram />
-                </button>
-                <button
-                  className=" edu-card btn btn-light shadow-sm"
-                  style={{ color: "#878e99" }}
-                >
-                  <FaLinkedinIn />
-                </button>
+        <div className="position-relative container form-header ">
+          <div className="row bg-white rounded shadow d-flex align-items-center p-4 gap-4 flex-wrap">
+            <div className="col-md-6 d-flex  justify-content-start  ">
+              <div className="w-25">
+                <img
+                  src={logo}
+                  className="border border-3 mr-3"
+                  width="190"
+                  height='190'
+                  alt="avatar"
+                />
+              </div>
+
+              <div
+                className="social-share flex-grow-1 d-flex align-items-center border-end"
+                style={{ height: "200px" }}
+              >
+                <div className=" ">
+                  <h4 className="fw-bold mb-0">Md Alamin Bali</h4>
+                  <p className="text-muted mb-1">I am a Technician</p>
+                  <div className="d-flex gap-2 mt-3">
+                    <button
+                      className=" edu-card  btn btn-light shadow-sm"
+                      style={{ color: "#878e99" }}
+                    >
+                      <FaFacebookF style={{ fontSize: "20px" }} />
+                    </button>
+                    <button
+                      className="edu-card  btn btn-light shadow-sm mx-3"
+                      style={{ color: "#878e99" }}
+                    >
+                      <FaInstagram style={{ fontSize: "20px" }} />
+                    </button>
+                    <button
+                      className=" edu-card btn btn-light shadow-sm"
+                      style={{ color: "#878e99" }}
+                    >
+                      <FaLinkedinIn style={{ fontSize: "20px" }} />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="row text-muted small w-50">
+
+            <div className="row col-md-6 text-muted small w-50">
               <div className="col-6">
                 <div>
                   <strong>Email:</strong> example@gmail.com
@@ -93,13 +101,12 @@ function App() {
       </div>
 
       {/* Main Layout */}
-      <div className="container mt-5 pt-5">
+      <div className="container tab-content-wrapper pt-5">
         <div className="row">
           {/* Sidebar */}
-          <div className="col-md-2 mb-4">
+          <div className="menu col-md-2 mb-4">
             <div className="bg-white rounded shadow p-3">
               <nav className="nav flex-column gap-2">
-           
                 <NavLink
                   to="/resume"
                   className={({ isActive }) =>
@@ -147,7 +154,7 @@ function App() {
           <div className="col-md-10 rounded bg-white">
             <Routes>
               <Route path="/" element={<MyPage />} />
-              <Route path="/blog" element={<MyPage id={6}  />} />
+              <Route path="/blog" element={<MyPage id={6} />} />
               <Route path="/resume" element={<Resume />} />
               <Route path="/work" element={<MyPage id={7} />} />
             </Routes>

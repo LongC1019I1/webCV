@@ -2,10 +2,11 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --font-primary: "Poppins", sans-serif;
   --color-body: #f2f4f8; /* Nền tối đẹp */
   --color-card: #ff014f; /* Xanh đậm cho card, hover */
   --color-accent: #f80057; /* Accent nổi bật */
-  
+
   --color-text-main: #8b8b8b; /* Chữ chính */
   --color-text-muted: #bbbbbb; /* Chữ phụ mờ */
   /* background: linear-gradient(135deg, #f80057, #db002f); */
@@ -39,8 +40,10 @@
 }
 
 body {
+  font-family: var(--font-primary);
   background-color: var(--color-body);
-  
+  font-size: 1.12rem;
+  /* transform: scale(1.1); */
 }
 .text-muted {
   color: var(--color-text-muted);
@@ -51,15 +54,88 @@ body {
   width: 100%;
   min-height: 1000px;
 }
+/* BEGIN HEADER */
+
+.form-header {
+  z-index: 5;
+  margin-top: -100px;
+
+  img {
+    width: 355px !important;
+    height: 180px;
+    position: relative;
+    top: -70px;
+  }
+}
+.header-thumbnail {
+  min-width: 190px;
+  border-color: #ecf0f3;
+  border: 5px solid #ecf0f3;
+  border-radius: 15px;
+  max-height: 200px;
+  position: relative;
+  top: -80px;
+  background: black;
+  min-width: 190px;
+  margin-right: 30px;
+}
+
+.social-share {
+  margin-left: 30px;
+  button {
+    color: rgb(135, 142, 153);
+    height: 53px;
+    line-height: 53px;
+    width: 53px;
+  }
+
+  svg {
+    font-size: 20px;
+    margin: auto;
+  }
+}
+
+/* END HEADER */
+/* --------------------------------------------------- */
+
+/* BEGIN CONTENT */
+
+.tab-content-wrapper {
+}
+
+.menu {
+  font-size: 1.25rem;
+  padding-left: 0px;
+  /* width: 95%; */
+  > div {
+    width: 190px;
+  }
+}
+
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+.nav-link.active,
+.nav-link:hover {
+  background-color: var(--color-card) !important;
+  color: var(--color-text-main) !important;
+  color: white !important;
+  border-radius: var(--bs-border-radius) !important;
+}
+
+/*  */
 
 .edu-card {
-  transition: all 0.3s ease;
+  transition: all 0.05s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .edu-card:hover {
   /* transform: translateY(-5px); */
-  transition-duration: 0.3s;
+  transition-duration: 0.05s;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   background: linear-gradient(135deg, #f80057, #db002f);
   color: white !important;
@@ -82,20 +158,15 @@ body {
   color: white;
   box-shadow: 0 4px 8px rgba(248, 0, 87, 0.3);
 }
-.nav-link.active {
-  background-color: var(--color-card) !important;
-  color: var(--color-text-main) !important;
-  color: white !important;
-}
-
 
 /* Animated Progress */
 
 .progress.gradient-bar {
-  height: 10px;
+  height: 15px;
   background-color: #e4e4e4;
   border-radius: 10px;
   overflow: hidden;
+  padding: 2px;
 }
 
 .progress-bar {

@@ -2,10 +2,12 @@
 .zoom-container {
   overflow: hidden;
   position: relative;
+  margin-top: 0;
+  padding-right: 44px;
 }
 
 .zoom-image {
-  height: 400px;
+
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -33,7 +35,6 @@
   color: var(--color-text-main) !important;
   transition-duration: 0.1s;
 }
-
 
 .title-area {
   min-height: 60px;

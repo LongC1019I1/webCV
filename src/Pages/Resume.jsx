@@ -5,6 +5,7 @@ import { FaPeopleGroup, FaCrown } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
 import parse from "html-react-parser";
+import AboutMe from "../components/About";
 const skills = {
   design: [
     { label: "AGILE - KABAN", value: 85 },
@@ -50,8 +51,7 @@ Thiết kế, xây dựng và quản trị website </p>
     highlight: false,
   },
   {
-    title:
-      "CHƯƠNG TRÌNH ĐÀO TẠO TƯ VẤN VÀ </br> HUẤN LUYỆN NỘI TÂM - MENTOR WIT",
+    title: "CHƯƠNG TRÌNH ĐÀO TẠO TƯ VẤN VÀ HUẤN LUYỆN NỘI TÂM - MENTOR WIT",
     subtitle: "Công ty CP Tổ Chức Đào Tạo WIT (07/2022 – 3/2023)",
     description: `<section>
   <h5>Kỹ năng & Năng lực đạt được (Mentor WiT)</h5>
@@ -134,7 +134,7 @@ const ExperienceSkills = () => {
       <section className="container py-5">
         <div className="row align-items-center">
           {/* Avatar */}
-          <div className="col-md-4 rounded text-center zoom-container pointer">
+          <div className="col-lg-5 rounded text-center zoom-container pointer">
             <img
               src={my_img}
               className="img-fluid rounded zoom-image "
@@ -143,14 +143,11 @@ const ExperienceSkills = () => {
           </div>
 
           {/* Info */}
-          <div className="col-md-8">
+          <div className="col-lg-7">
             <p className="text-uppercase text-danger fw-bold small">
               Visit my portfolio & hire me
             </p>
-            <h2 className="d-flex mb-3">
-              <FaUser className="mr-3" />
-              About Me
-            </h2>
+            <AboutMe />
             <p className="text-muted">
               Tôi là một Lập trình viên Fullstack với kinh nghiệm hơn 3 năm
               trong việc phát triển hệ thống Web App cả Frontend và Backend. Tôi
@@ -279,7 +276,9 @@ const ExperienceSkills = () => {
               className={`edu-card p-4 position-relative rounded-3 mb-3  bg-light`}
             >
               <span className="badge score-badge">{item.score}/10</span>
-              <h5 className="fw-bold">{item.title}</h5>
+              <h5 className="fw-bold" style={{ maxWidth: "395px" }}>
+                {item.title}
+              </h5>
               <small className="text-muted d-block mb-3">{item.subtitle}</small>
               <hr />
               <p className={`mb-0 text-muted `}> {parse(item.description)}</p>
@@ -297,7 +296,9 @@ const ExperienceSkills = () => {
               className={`edu-card p-4 position-relative rounded-3 mb-3  bg-light`}
             >
               <span className="badge score-badge">{item.score}/5</span>
-              <h5 className="fw-bold">{item.title}</h5>
+              <h5 className="fw-bold" style={{ maxWidth: "395px" }}>
+                {item.title}
+              </h5>
               <small className="text-muted d-block mb-3">{item.subtitle}</small>
               <hr />
               <p className={`mb-0 text-muted `}>{parse(item.description)}</p>
