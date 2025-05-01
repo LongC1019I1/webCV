@@ -3,12 +3,17 @@
   line-height: 1.5;
   font-weight: 400;
   --font-primary: "Poppins", sans-serif;
-  --color-body: #ffedd3; 
-  --color-card: #ff014f; /* Xanh đậm cho card, hover */
-  --color-accent: #f80057; /* Accent nổi bật */
+  --color-body: #ffedd3;
+  /* --color-card: #ff014f; */
+  /* Xanh đậm cho card, hover */
+  --color-card: rgb(237 157 71);
+  --color-accent: #f80057;
+  /* Accent nổi bật */
 
-  --color-text-main: #8b8b8b; /* Chữ chính */
-  --color-text-muted: #bbbbbb; /* Chữ phụ mờ */
+  --color-text-main: #8b8b8b;
+  /* Chữ chính */
+  --color-text-muted: #bbbbbb;
+  /* Chữ phụ mờ */
   /* background: linear-gradient(135deg, #f80057, #db002f); */
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -23,6 +28,7 @@
 @import "tailwindcss";
 @import "./assets/css/tooltip.css";
 @import "./assets/css/modal.css";
+
 .no-wrap {
   display: block;
   white-space: nowrap;
@@ -41,10 +47,11 @@
 
 body {
   font-family: var(--font-primary);
-  background-color: var(--color-body);
+  background: linear-gradient(134deg, #ffe0d1, #fff);
   font-size: 1.12rem;
   /* transform: scale(1.1); */
 }
+
 .text-muted {
   color: var(--color-text-muted);
 }
@@ -54,6 +61,7 @@ body {
   width: 100%;
   min-height: 1000px;
 }
+
 /* BEGIN HEADER */
 
 .form-header {
@@ -67,9 +75,10 @@ body {
     /* top: -70px;
      */
 
-   
+
   }
 }
+
 .header-thumbnail {
   min-width: 190px;
   border-color: #ecf0f3;
@@ -85,6 +94,7 @@ body {
 
 .social-share {
   margin-left: 30px;
+
   button {
     color: rgb(135, 142, 153);
     height: 53px;
@@ -103,14 +113,14 @@ body {
 
 /* BEGIN CONTENT */
 
-.tab-content-wrapper {
-}
+.tab-content-wrapper {}
 
 .menu {
   font-size: 1.25rem;
   padding-left: 0px;
+
   /* width: 95%; */
-  > div {
+  >div {
     width: 190px;
   }
 }
@@ -121,6 +131,7 @@ body {
   align-items: center;
   height: 90px;
 }
+
 .nav-link.active,
 .nav-link:hover {
   background-color: var(--color-card) !important;
@@ -140,13 +151,22 @@ body {
   /* transform: translateY(-5px); */
   transition-duration: 0.05s;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #f80057, #db002f);
+  background: linear-gradient(135deg, #ed9d47, #af7436);
   color: white !important;
   cursor: pointer;
 
   .text-muted {
     transition-duration: 0.3s;
     color: white !important;
+  }
+}
+
+.edu-card-2:hover {
+  transition-duration: 0.05s;
+  background: linear-gradient(135deg, #bfbebc, #4f4e4e);
+
+  a {
+    color: rgb(255, 255, 255) !important;
   }
 }
 
@@ -159,7 +179,7 @@ body {
   font-size: 0.8rem;
   background: var(--color-card);
   color: white;
-  box-shadow: 0 4px 8px rgba(248, 0, 87, 0.3);
+  box-shadow: 0 3px 4px rgb(113 113 112);
 }
 
 /* Animated Progress */
@@ -173,7 +193,7 @@ body {
 }
 
 .progress-bar {
-  background: linear-gradient(to right, #ffffff, #f80057);
+  background: linear-gradient(to right, #ffffff, #9f9397);
   height: 100%;
   transition: width 1.5s ease-in-out;
   border-radius: 10px;

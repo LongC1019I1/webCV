@@ -120,7 +120,7 @@ const job = [
     title: "Freelancer – Kinh doanh & Chăm sóc Sức khỏe  ",
     subtitle: "(2024 – nay)",
     description: `  <h5>Mô tả công việc:</h5>
-  <li>Quản lý và vận hành web Shopee <a href="https://shopee.vn/bobestore688" target="_blank">Bobe Store 688</a>,  https://shopee.vn/bobestore688 và fanpage bán hàng online <a href="https://www.facebook.com/KousCorner" target="_blank">KousCorner</a>, xử lý đơn hàng và chăm sóc khách hàng</li>
+  <li>Quản lý và vận hành web Shopee <a className='text-secondary' href="https://shopee.vn/bobestore688" target="_blank">Bobe Store 688</a>, và fanpage bán hàng online <a className='text-secondary' href="https://www.facebook.com/KousCorner" target="_blank">KousCorner</a>, xử lý đơn hàng và chăm sóc khách hàng</li>
     <li>Khởi xướng và điều phối CLB chăm sóc sức khỏe Herbalife, tổ chức các buổi chia sẻ và kết nối cộng đồng</li>
     <li>Phát triển kỹ năng tổ chức, làm việc nhóm, giao tiếp và giải quyết vấn đề – nền tảng quan trọng trong môi trường Agile/Scrum</li>`,
     score: "4.70",
@@ -143,8 +143,8 @@ const ExperienceSkills = () => {
           </div>
 
           {/* Info */}
-          <div className="col-lg-7">
-            <p className="text-uppercase text-danger fw-bold small">
+          <div className="col-lg-7 " style={{ "padding-left": "20px" }}>
+            <p className="text-uppercase color_main fw-bold small">
               Visit my portfolio & hire me
             </p>
             <AboutMe />
@@ -162,19 +162,29 @@ const ExperienceSkills = () => {
               luôn hướng đến việc xây dựng đội ngũ vững mạnh – cả về chuyên môn
               lẫn văn hóa.
             </p>
-            <blockquote>
-              <strong>🌱 Triết lý làm việc:</strong> Mọi thành công đều đến từ
-              môi trường tốt{" "}
-              <p className="mt-2">
-                {" "}
-                Cho nên cần phải xây dựng văn hóa và con người đi trước công cụ, phương pháp
-                đi sau
+            <div className="mt-4">
+              <h5 className="h5 text-success fw-bold">🌱 Triết lý làm việc</h5>
+              <p className="fst-italic text-muted mt-1">
+                "Mọi thành công đều đến từ môi trường tốt"
               </p>
-            </blockquote>
-            <button className=" edu-card  bg-light btn  mt-3 shadow">
-              Download My CV
-            </button>
+              <p className="text-secondary mt-1">
+                Tôi tin rằng{" "}
+                <b>
+                  mọi thành công bền vững đều xuất phát từ một môi trường tốt
+                </b>{" "}
+                – nơi con người được phát triển và văn hóa được vun đắp. Khi đội
+                ngũ đủ mạnh và giá trị chung đủ rõ ràng, mọi công cụ và phương
+                pháp chỉ còn là chất xúc tác để bứt phá.
+              </p>
+            </div>
           </div>
+        </div>
+
+        <div className="d-flex justify-content-center">
+          {" "}
+          <button className=" edu-card  bg-light btn  mt-1 shadow">
+            Download My CV
+          </button>
         </div>
 
         {/* Services */}
@@ -278,7 +288,7 @@ const ExperienceSkills = () => {
           {edu.map((item, index) => (
             <div
               key={index}
-              className={`edu-card p-4 position-relative rounded-3 mb-3  bg-light`}
+              className={`edu-card edu-card-2  p-4 position-relative rounded-3 mb-3  bg-light`}
             >
               <span className="badge score-badge">{item.score}/10</span>
               <h5 className="fw-bold" style={{ maxWidth: "395px" }}>
@@ -298,7 +308,7 @@ const ExperienceSkills = () => {
           {job.map((item, index) => (
             <div
               key={index}
-              className={`edu-card p-4 position-relative rounded-3 mb-3  bg-light`}
+              className={`edu-card edu-card-2 p-4 position-relative rounded-3 mb-3  bg-light`}
             >
               <span className="badge score-badge">{item.score}/5</span>
               <h5 className="fw-bold" style={{ maxWidth: "395px" }}>
@@ -317,7 +327,7 @@ const ExperienceSkills = () => {
         <div className="row">
           {/* Design Skill */}
           <div className="col-md-6 mb-4">
-            <p className="text-danger mb-1 fw-semibold">Features</p>
+            <p className="color_main mb-1 fw-semibold">Features</p>
             <h5 className="fw-bold my-3">Xây Dựng Đội Nhóm</h5>
             {skills.design.map((skill, idx) => (
               <div className="mb-3" key={idx}>
@@ -332,7 +342,7 @@ const ExperienceSkills = () => {
 
           {/* Development Skill */}
           <div className="col-md-6 mb-4">
-            <p className="text-danger mb-1 fw-semibold">Features</p>
+            <p className="color_main mb-1 fw-semibold">Features</p>
             <h5 className="fw-bold  my-3">Development Skill</h5>
             {skills.development.map((skill, idx) => (
               <div className="mb-3" key={idx}>

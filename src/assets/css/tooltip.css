@@ -10,10 +10,13 @@
 .zoom-image {
   object-fit: cover;
   transition: transform 0.4s ease;
+  position: relative;
+  left: 25px;
 }
 
 .zoom-container:hover .zoom-image {
-  transform: scale(1.03); /* zoom 120% */
+  transform: scale(1.03);
+  /* zoom 120% */
 }
 
 /* OTHER TIP */

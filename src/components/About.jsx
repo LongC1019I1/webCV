@@ -6,7 +6,12 @@ const AboutMe = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    const texts = ["a Web Developer", "a Blogger", "a Life Long Learner", "an Inner Coach"];
+    const texts = [
+      "a Web Developer",
+      "a Blogger",
+      "a Life Long Learner",
+      "an Inner Coach",
+    ];
     let count = 0;
     let index = 0;
     let currentText = "";
@@ -59,7 +64,7 @@ const AboutMe = () => {
       {/* <FaUser className="mr-3" /> */}
       I'm&nbsp;
       <span
-        className="text-danger"
+        className="color_main"
         id="typing"
         ref={typingRef}
         style={{ whiteSpace: "pre" }}
