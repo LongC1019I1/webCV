@@ -163,8 +163,13 @@ const ExperienceSkills = () => {
               lẫn văn hóa.
             </p>
             <blockquote>
-              <strong>🌱 Triết lý làm việc:</strong> Xây giá trị thật – Cùng
-              phát triển thật.
+              <strong>🌱 Triết lý làm việc:</strong> Mọi thành công đều đến từ
+              môi trường tốt{" "}
+              <p className="mt-2">
+                {" "}
+                Cho nên cần phải xây dựng văn hóa và con người đi trước công cụ, phương pháp
+                đi sau
+              </p>
             </blockquote>
             <button className=" edu-card  bg-light btn  mt-3 shadow">
               Download My CV

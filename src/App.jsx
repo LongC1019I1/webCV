@@ -7,7 +7,7 @@ import bg from "./assets/img/header-bg-3.png";
 import MyPage from "./Pages/MyPage";
 import Work from "./Pages/Work";
 import Resume from "./Pages/Resume";
-import logo from "./assets//img/logo.png";
+import logo from "./assets//img/logo-2.png";
 import {
   FaFacebookF,
   FaInstagram,
