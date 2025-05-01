@@ -1,6 +1,6 @@
 import React from "react";
 import AnimatedProgress from "../components/AnimatedProgress";
-import my_img from "../assets/img/my_img.jpg";
+import my_img from "../assets/img/my-profile.png";
 import { FaPeopleGroup, FaCrown } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
@@ -134,7 +134,7 @@ const ExperienceSkills = () => {
       <section className="container py-5">
         <div className="row align-items-center">
           {/* Avatar */}
-          <div className="col-lg-5 rounded text-center zoom-container pointer">
+          <div className="col-lg-5 rounded text-center zoom-container pt-4 pointer">
             <img
               src={my_img}
               className="img-fluid rounded zoom-image "

@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   --font-primary: "Poppins", sans-serif;
-  --color-body: #f2f4f8; /* Nền tối đẹp */
+  --color-body: #ffedd3; 
   --color-card: #ff014f; /* Xanh đậm cho card, hover */
   --color-accent: #f80057; /* Accent nổi bật */
 
@@ -64,7 +64,10 @@ body {
     width: 355px !important;
     height: 180px;
     position: relative;
-    top: -70px;
+    /* top: -70px;
+     */
+
+   
   }
 }
 .header-thumbnail {

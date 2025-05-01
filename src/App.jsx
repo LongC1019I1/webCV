@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "./store/categorySlice";
 import { fetchPostsByCategory } from "./store/postSlice";
-import bg from "./assets/img/bg-image-9.webp";
+import bg from "./assets/img/header-bg-3.png";
 import MyPage from "./Pages/MyPage";
 import Work from "./Pages/Work";
 import Resume from "./Pages/Resume";
@@ -40,9 +40,9 @@ function App() {
               <div className="w-25">
                 <img
                   src={logo}
-                  className="border border-3 mr-3"
+                  className="border border-3 mr-3 rounded"
                   width="190"
-                  height='190'
+                  height="190"
                   alt="avatar"
                 />
               </div>
@@ -52,8 +52,8 @@ function App() {
                 style={{ height: "200px" }}
               >
                 <div className=" ">
-                  <h4 className="fw-bold mb-0">Md Alamin Bali</h4>
-                  <p className="text-muted mb-1">I am a Technician</p>
+                  <h4 className="fw-bold mb-0">Bạch Thành Long</h4>
+                  <p className="text-muted mb-1">I am a Fullstack Developer</p>
                   <div className="d-flex gap-2 mt-3">
                     <button
                       className=" edu-card  btn btn-light shadow-sm"
@@ -81,18 +81,18 @@ function App() {
             <div className="row col-md-6 text-muted small w-50">
               <div className="col-6">
                 <div>
-                  <strong>Email:</strong> example@gmail.com
+                  <strong>Email:</strong> bachthanhlong.it@gmail.com
                 </div>
                 <div>
-                  <strong>Phone:</strong> +880123456789
+                  <strong>Phone:</strong> +84363632015
                 </div>
               </div>
               <div className="col-6">
                 <div>
-                  <strong>Birthday:</strong> 20 August
+                  <strong>Birthday:</strong> 10 Oct
                 </div>
                 <div>
-                  <strong>Location:</strong> Barisal, Bangladesh
+                  <strong>Location:</strong> Trần Phú, Hà Đông, Hà Nội
                 </div>
               </div>
             </div>
