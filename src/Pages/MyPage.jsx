@@ -12,7 +12,7 @@ const MyPage = ({ id, type }) => {
 
   const posts = dataByCategory[id];
 
-  
+  console.log({ posts });
 
   if (loading) return <p>Đang tải bài viết...</p>;
 
@@ -46,12 +46,19 @@ const MyPage = ({ id, type }) => {
                 <div className="card-body p-0">
                   <div className="d-flex title my-4  justify-content-between text-muted small">
                     <div className="no-wrap" style={{ width: "100px" }}>
-                      <span
-                        className="text-uppercase fw-semibold mr-3 "
-                        style={{ color: "#f80057" }}
-                      >
-                        Website
-                      </span>
+                      {(
+                        post._embedded["wp:term"].find(
+                          (group) => group[0]?.taxonomy === "post_tag"
+                        ) || []
+                      ).map((tag) => (
+                        <span
+                          key={tag.id}
+                          className="text-uppercase fw-semibold mr-3"
+                          style={{ color: "#f80057" }}
+                        >
+                          {tag.name}
+                        </span>
+                      ))}
                     </div>
                     <span className="d-flex ">
                       <FaClock className="me-1 mb-1" />

@@ -129,21 +129,7 @@ const Modal = ({ post, onClose }) => {
                 : ""}
             </div>
           </div>
-          <div className="d-flex justify-content-center">
-            {" "}
-            <a
-              target="blank"
-              style={{ textDecoration: "none", color: "none" }}
-              href="https://thansohoclong.netlify.app/"
-            >
-              <button
-                style={{ color: "#f80057" }}
-                className=" bg-gradient-gray  edu-card-3 color_main  bg-light btn  mt-1 shadow"
-              >
-                XEM DỰ ÁN CỦA TÔI
-              </button>
-            </a>
-          </div>
+     
         </div>
       </div>
     </div>
