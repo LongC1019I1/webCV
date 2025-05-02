@@ -24,9 +24,9 @@
 }
 
 .modal-content-custom {
-  background-color: white;
+  background: var( --gradient-box-w);
   border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow:var( --shadow-white-3);
   max-width: 1000px;
   width: 90%;
   position: relative;

@@ -3,7 +3,7 @@ import { FaClock } from "react-icons/fa";
 import Modal from "../components/Modal";
 import { useSelector } from "react-redux";
 
-const MyPage = ({id}) => {
+const MyPage = ({ id, type }) => {
   const [selectedPost, setSelectedPost] = useState(null);
 
   const { dataByCategory, loading, error } = useSelector(
@@ -12,53 +12,53 @@ const MyPage = ({id}) => {
 
   const posts = dataByCategory[id];
 
-
-
+  
 
   if (loading) return <p>Đang tải bài viết...</p>;
 
   return (
-    <div>
-      <div className="row g-4 mb-3">
+    <div className="my_page px-5 ">
+      <div className="row g-4 pt-4 pl-3 mb-3">
         {posts &&
           posts.map((post, index) => (
-            <div className="col-md-4 cusor pointer" key={index}>
-              <div
-                className="card shadow-sm h-100"
-                onClick={() => setSelectedPost(post)}
-              >
-                {post._embedded && post._embedded["wp:featuredmedia"] ? (
-                  <img
-                    src={post._embedded["wp:featuredmedia"][0].source_url}
-                    style={{ height: "160px", objectFit: "cover" }}
-                    className="card-img-top"
-                    alt="Ảnh đại diện"
-                  />
-                ) : (
-                  <img
-                    src={post.img}
-                    className="card-img-top"
-                    alt={`blog-${index}`}
-                    style={{ height: "160px", objectFit: "cover" }}
-                  />
-                )}
+            <div
+              className="col-md-4 d-flex justify-content-center my-card rounded p-4  cusor pointer"
+              key={index}
+            >
+              <div className=" h-100 " onClick={() => setSelectedPost(post)}>
+                <div className="zoom-container d-flex justify-content-center">
+                  {" "}
+                  {post._embedded && post._embedded["wp:featuredmedia"] ? (
+                    <img
+                      className="zoom-image"
+                      src={post._embedded["wp:featuredmedia"][0].source_url}
+                      alt="Ảnh đại diện"
+                    />
+                  ) : (
+                    <img
+                      className="zoom-image"
+                      src={post.img}
+                      alt={`blog-${index}`}
+                    />
+                  )}
+                </div>
 
-                <div className="card-body">
-                  <div className="d-flex justify-content-between text-muted small mb-1">
-                    <div className="no-wrap" style={{ width: "50px" }}>
+                <div className="card-body p-0">
+                  <div className="d-flex title my-4  justify-content-between text-muted small">
+                    <div className="no-wrap" style={{ width: "100px" }}>
                       <span
                         className="text-uppercase fw-semibold mr-3 "
                         style={{ color: "#f80057" }}
                       >
-                        BLOG
+                        Website
                       </span>
                     </div>
-                    <span className="d-flex justify-content-between">
+                    <span className="d-flex ">
                       <FaClock className="me-1 mb-1" />
                       {post.date.split("T")[0]}
                     </span>
                   </div>
-                  <h6 className="fw-semibold">{post.title.rendered}</h6>
+                  <h4 className="fw-semibold">{post.title.rendered}</h4>
                 </div>
               </div>
             </div>

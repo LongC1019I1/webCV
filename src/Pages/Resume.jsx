@@ -134,7 +134,7 @@ const ExperienceSkills = () => {
       <section className="container py-5">
         <div className="row align-items-center">
           {/* Avatar */}
-          <div className="col-lg-5 rounded text-center zoom-container pt-4 pointer">
+          <div className="col-lg-5 my-avatar rounded text-center zoom-container pt-4 pointer">
             <img
               src={my_img}
               className="img-fluid rounded zoom-image "

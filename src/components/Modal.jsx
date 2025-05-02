@@ -18,6 +18,23 @@ const Modal = ({ post, onClose }) => {
     }
   }, [post]);
 
+  const tagIds = post.tags;
+
+  // Lấy tag objects đã được embed sẵn
+  const tagObjects = post._embedded["wp:term"].find(
+    (termGroup) => termGroup.length > 0 && termGroup[0].taxonomy === "post_tag"
+  );
+
+  // Đổi tag ID thành tên
+  const tagNames = tagIds
+    .map((tagId) => {
+      const tag = tagObjects.find((t) => t.id === tagId);
+      return tag ? tag.name : null;
+    })
+    .filter(Boolean);
+
+  console.log(tagNames); // ["Blog", "Website"]
+
   const handleOverlayClick = (e) => {
     // Nếu click chính xác vào overlay thì mới close
     if (e.target.classList.contains("modal-overlay")) {
@@ -42,63 +59,90 @@ const Modal = ({ post, onClose }) => {
       }`}
     >
       <div className="modal-content-custom">
-        <button onClick={handleClose} className="close-button main-color">
+        <button onClick={handleClose} className="close-button color-pink ">
           <IoMdClose size={20} />
         </button>
-
-        <div className="modal-image">
-          {post._embedded && post._embedded["wp:featuredmedia"] ? (
-            <img
-              src={post._embedded["wp:featuredmedia"][0].source_url}
-              // style={{ height: "160px", objectFit: "cover" }}
-              className="card-img-top my-4"
-              alt="Ảnh đại diện"
-            />
-          ) : (
-            <img
-              src={post.img}
-              className="card-img-top"
-
-              // style={{ height: "160px", objectFit: "cover" }}
-            />
-          )}
-        </div>
-
-        <div className="modal-details">
-          <p className="text-muted mb-1">
-            Featured -{" "}
-            <strong>
-              {post.categories.map((id) => {
-                let category = categories.find((cate) => cate.id == id);
-
-                return category ? (
-                  <span
-                    className="text-uppercase fw-semibold mr-3 "
-                    style={{ color: "#f80057" }}
-                  >
-                    {category.name}
-                  </span>
-                ) : null;
-              })}
-            </strong>
-          </p>
-          <div className="d-flex justify-content-between">
-            {" "}
-            <h4 className="fw-bold mb-3" style={{ color: "#151515" }}>
-              {post.title.rendered}
-            </h4>
-            <span className="d-flex justify-content-between">
-              <FaClock
-                className="me-1 mb-1"
-                style={{ position: "relative", top: "5px" }}
+        <div className="row my-4 ">
+          <div className="col-6 modal-image   ">
+            {post._embedded && post._embedded["wp:featuredmedia"] ? (
+              <img
+                src={post._embedded["wp:featuredmedia"][0].source_url}
+                // style={{ height: "160px", objectFit: "cover" }}
+                className="card-img-top rounded h-75"
+                alt="Ảnh đại diện"
               />
-              {post.date.split("T")[0]}
-            </span>
+            ) : (
+              ""
+            )}
           </div>
-          <div className="content">
-            {post.content && post.content.rendered
-              ? parse(post.content.rendered)
-              : ""}
+
+          {/* <div className="col-6 
+          modal-details "></div> */}
+          <div
+            className="col-6 
+           "
+          >
+            <p className="text-muted mb-3 fw-semibold mb-1">
+              DỰ ÁN -{" "}
+              <strong>
+                {tagNames.map((tag) => {
+                  return (
+                    <span
+                      className="text-uppercase fw-semibold mr-1 "
+                      style={{ color: "#f80057" }}
+                    >
+                      {" "}
+                      {tag}{" "}
+                    </span>
+                  );
+                })}
+                {/* {post.categories.map((id) => {
+                  let category = categories.find((cate) => cate.id == id);
+
+                  return category ? (
+                    <span
+                      className="text-uppercase fw-semibold mr-3 "
+                      style={{ color: "#f80057" }}
+                    >
+                      {category.name}
+                    </span>
+                  ) : null;
+                })} */}
+              </strong>
+            </p>
+            <div className="d-flex justify-content-between">
+              {" "}
+              <h2 className="fw-bold mb-3" style={{ color: "#151515" }}>
+                {post.title.rendered}
+              </h2>
+              {/* <span className="d-flex justify-content-between">
+                <FaClock
+                  className="me-1 mb-1"
+                  style={{ position: "relative", top: "5px" }}
+                />
+                {post.date.split("T")[0]}
+              </span> */}
+            </div>
+            <div className="content">
+              {post.content && post.content.rendered
+                ? parse(post.content.rendered)
+                : ""}
+            </div>
+          </div>
+          <div className="d-flex justify-content-center">
+            {" "}
+            <a
+              target="blank"
+              style={{ textDecoration: "none", color: "none" }}
+              href="https://thansohoclong.netlify.app/"
+            >
+              <button
+                style={{ color: "#f80057" }}
+                className=" bg-gradient-gray  edu-card-3 color_main  bg-light btn  mt-1 shadow"
+              >
+                XEM DỰ ÁN CỦA TÔI
+              </button>
+            </a>
           </div>
         </div>
       </div>

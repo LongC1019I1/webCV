@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchCategories());
     dispatch(fetchPostsByCategory(6));
-    dispatch(fetchPostsByCategory(7));
+    dispatch(fetchPostsByCategory(8));
   }, [dispatch]);
 
   return (
@@ -151,12 +151,12 @@ function App() {
           </div>
 
           {/* Blog Cards */}
-          <div className="col-md-10 rounded bg-white">
+          <div className="col-md-10 rounded bg-white ">
             <Routes>
               <Route path="/" element={<MyPage />} />
-              <Route path="/blog" element={<MyPage id={6} />} />
+              <Route path="/blog" element={<MyPage id={6}  />} />
               <Route path="/resume" element={<Resume />} />
-              <Route path="/work" element={<MyPage id={7} />} />
+              <Route path="/work" element={<MyPage id={8} type="work" />} />
             </Routes>
           </div>
         </div>
