@@ -3,6 +3,7 @@ import { FaClock } from "react-icons/fa";
 import Modal from "../components/Modal";
 import { useSelector } from "react-redux";
 
+
 const MyPage = ({ id, type }) => {
   const [selectedPost, setSelectedPost] = useState(null);
 
@@ -17,15 +18,15 @@ const MyPage = ({ id, type }) => {
   if (loading) return <p>Đang tải bài viết...</p>;
 
   return (
-    <div className="my_page px-5 ">
-      <div className="row g-4 pt-4 pl-3 mb-3">
+    <div className="my_page  ">
+      <div className="row g-4 pt-4 px-5 mb-3 my_page_container">
         {posts &&
           posts.map((post, index) => (
             <div
               className="col-md-4 d-flex justify-content-center my-card rounded p-4  cusor pointer"
               key={index}
             >
-              <div className=" h-100 " onClick={() => setSelectedPost(post)}>
+              <div className="w-100 h-100 " onClick={() => setSelectedPost(post)}>
                 <div className="zoom-container d-flex justify-content-center">
                   {" "}
                   {post._embedded && post._embedded["wp:featuredmedia"] ? (
@@ -45,7 +46,7 @@ const MyPage = ({ id, type }) => {
 
                 <div className="card-body p-0">
                   <div className="d-flex title my-4  justify-content-between text-muted small">
-                    <div className="no-wrap" style={{ width: "100px" }}>
+                    <div className="no-wrap" style={{ width: "125px" }}>
                       {(
                         post._embedded["wp:term"].find(
                           (group) => group[0]?.taxonomy === "post_tag"

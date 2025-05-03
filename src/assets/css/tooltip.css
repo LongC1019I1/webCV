@@ -22,11 +22,12 @@
 /* Main color settings */
 
 .color-red {
-  color: var(--color-red);
+  color: var(--color-red) !important;
 }
 .color-pink {
   color: var(--color-red);
 }
+
 .color-pink:hover {
   background: var(--gradient-pink-hover) !important;
   color: white;
@@ -34,6 +35,15 @@
 
 .color_main {
   color: var(--color-card);
+}
+
+.color-green {
+  transition: all 0.4s ease;
+  color: var(--color-green);
+}
+.color-green-hv:hover {
+  transition: background 0.4s ease, transform 0.4s ease;
+  background: var(--gradient-green-hover) !important ;
 }
 
 .main-color {
@@ -53,5 +63,3 @@
 .bg-gradient-gray {
   background: var(--gradient-box-w);
 }
-
-/* color */

@@ -24,9 +24,9 @@
 }
 
 .modal-content-custom {
-  background: var( --gradient-box-w);
+  background: var(--gradient-box-w);
   border-radius: 1rem;
-  box-shadow:var( --shadow-white-3);
+  box-shadow: var(--shadow-white-3);
   max-width: 1000px;
   width: 90%;
   position: relative;
@@ -47,6 +47,10 @@
   flex: 1;
   margin-right: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.card-img-avt {
+  /* height: 431px; */
 }
 
 @media (min-width: 768px) {

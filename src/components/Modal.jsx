@@ -1,9 +1,10 @@
 // Modal.jsx
 import React, { useState, useEffect } from "react";
-
 import { IoMdClose } from "react-icons/io";
 import { useSelector } from "react-redux";
 import { FaClock } from "react-icons/fa";
+import { FaChevronCircleDown } from "react-icons/fa";
+
 import parse from "html-react-parser";
 
 const Modal = ({ post, onClose }) => {
@@ -64,11 +65,35 @@ const Modal = ({ post, onClose }) => {
         </button>
         <div className="row my-4 ">
           <div className="col-6 modal-image   ">
-            {post._embedded && post._embedded["wp:featuredmedia"] ? (
+            {post.title.rendered == "Lumi App Desktop" ? (
+              <iframe
+                width="396"
+                height={"65%"}
+                className="rounded"
+                src="https://www.youtube.com/embed/2pf5gNNX3wU"
+                title="Lumi Life phiên bản dành cho máy tính - Giới thiệu và hướng dẫn sử dụng"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            ) : post.title.rendered == "Lumi Walker" ? (
+              <iframe
+                width="100%"
+                height={"55%"}
+                className="rounded"
+                src="https://www.youtube.com/embed/cg24oZMCaEg"
+                title="App Lumi Walker"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            ) : post._embedded && post._embedded["wp:featuredmedia"] ? (
               <img
                 src={post._embedded["wp:featuredmedia"][0].source_url}
                 // style={{ height: "160px", objectFit: "cover" }}
-                className="card-img-top rounded h-75"
+                className="card-img-avt rounded"
                 alt="Ảnh đại diện"
               />
             ) : (
@@ -129,7 +154,6 @@ const Modal = ({ post, onClose }) => {
                 : ""}
             </div>
           </div>
-     
         </div>
       </div>
     </div>
