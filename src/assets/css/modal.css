@@ -35,6 +35,13 @@
   padding: 1.5rem;
   max-height: 90vh; /* 👈 Giới hạn chiều cao modal */
   overflow-y: auto;
+
+  .modal-post {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+  }
 }
 
 @media (min-width: 768px) {

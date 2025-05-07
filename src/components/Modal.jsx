@@ -7,7 +7,7 @@ import { FaChevronCircleDown } from "react-icons/fa";
 
 import parse from "html-react-parser";
 
-const Modal = ({ post, onClose }) => {
+const Modal = ({ post, onClose, type }) => {
   const [fadeIn, setFadeIn] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -64,7 +64,11 @@ const Modal = ({ post, onClose }) => {
           <IoMdClose size={20} />
         </button>
         <div className="row my-4 ">
-          <div className="col-6 modal-image   ">
+          <div
+            className={`${
+              type === "work" ? "col-6" : "modal-post"
+            } modal-image`}
+          >
             {post.title.rendered == "Lumi App Desktop" ? (
               <iframe
                 width="396"
@@ -103,10 +107,7 @@ const Modal = ({ post, onClose }) => {
 
           {/* <div className="col-6 
           modal-details "></div> */}
-          <div
-            className="col-6 
-           "
-          >
+          <div className={type == "work" ? "col-6" : ""}>
             <p className="text-muted mb-3 fw-semibold mb-1">
               DỰ ÁN -{" "}
               <strong>

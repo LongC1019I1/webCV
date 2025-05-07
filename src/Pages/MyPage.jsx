@@ -3,7 +3,6 @@ import { FaClock } from "react-icons/fa";
 import Modal from "../components/Modal";
 import { useSelector } from "react-redux";
 
-
 const MyPage = ({ id, type }) => {
   const [selectedPost, setSelectedPost] = useState(null);
 
@@ -11,9 +10,10 @@ const MyPage = ({ id, type }) => {
     (state) => state.posts
   );
 
+  console.log({ dataByCategory });
   const posts = dataByCategory[id];
 
-  console.log({ posts });
+  console.log({ posts, id });
 
   if (loading) return <p>Đang tải bài viết...</p>;
 
@@ -26,7 +26,10 @@ const MyPage = ({ id, type }) => {
               className="col-md-4 d-flex justify-content-center my-card rounded p-4  cusor pointer"
               key={index}
             >
-              <div className="w-100 h-100 " onClick={() => setSelectedPost(post)}>
+              <div
+                className="w-100 h-100 "
+                onClick={() => setSelectedPost(post)}
+              >
                 <div className="zoom-container d-flex justify-content-center">
                   {" "}
                   {post._embedded && post._embedded["wp:featuredmedia"] ? (
@@ -74,7 +77,11 @@ const MyPage = ({ id, type }) => {
       </div>
 
       {selectedPost && (
-        <Modal post={selectedPost} onClose={() => setSelectedPost(null)} />
+        <Modal
+          type={type}
+          post={selectedPost}
+          onClose={() => setSelectedPost(null)}
+        />
       )}
     </div>
   );

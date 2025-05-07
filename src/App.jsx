@@ -20,7 +20,8 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchCategories());
-    dispatch(fetchPostsByCategory(6));
+    dispatch(fetchPostsByCategory(13));
+    dispatch(fetchPostsByCategory(7));
     dispatch(fetchPostsByCategory(8));
   }, [dispatch]);
 
@@ -143,6 +144,18 @@ function App() {
                 >
                   Blog
                 </NavLink>
+                <NavLink
+                  to="/cac-chung-nhan"
+                  className={({ isActive }) =>
+                    `nav-link ${
+                      isActive
+                        ? "active bg-danger text-white rounded"
+                        : "text-dark"
+                    }`
+                  }
+                >Certificate
+                 
+                </NavLink>
                 <a className="nav-link text-dark" href="#">
                   Contact
                 </a>
@@ -154,8 +167,12 @@ function App() {
           <div className="col-md-10 rounded bg-white ">
             <Routes>
               <Route path="/" element={<MyPage />} />
-              <Route path="/blog" element={<MyPage id={6}  />} />
+              <Route path="/blog" element={<MyPage id={13} />} />
               <Route path="/resume" element={<Resume />} />
+              <Route
+                path="/cac-chung-nhan"
+                element={<MyPage id={7} type="blog" />}
+              />
               <Route path="/work" element={<MyPage id={8} type="work" />} />
             </Routes>
           </div>

@@ -63,3 +63,11 @@
 .bg-gradient-gray {
   background: var(--gradient-box-w);
 }
+/* POST */
+
+.aligncenter {
+  img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
