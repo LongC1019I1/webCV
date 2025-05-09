@@ -7,7 +7,7 @@ import bg from "./assets/img/header-bg-3.png";
 import MyPage from "./Pages/MyPage";
 import Work from "./Pages/Work";
 import Resume from "./Pages/Resume";
-import logo from "./assets//img/logo-2.png";
+import logo from "./assets//img/logo.png";
 import {
   FaFacebookF,
   FaInstagram,
@@ -36,14 +36,12 @@ function App() {
           alt="header"
         />
         <div className="position-relative container form-header ">
-          <div className="row bg-white rounded shadow d-flex align-items-center p-4 gap-4 flex-wrap">
+          <div className="bg-header row bg-white  shadow d-flex align-items-center p-4 gap-4 flex-wrap">
             <div className="col-md-6 d-flex  justify-content-start  ">
               <div className="w-25">
                 <img
                   src={logo}
-                  className="border border-3 mr-3 rounded"
-                  width="190"
-                  height="190"
+                  className="border border-2 mr-3 "
                   alt="avatar"
                 />
               </div>
@@ -52,24 +50,24 @@ function App() {
                 className="social-share flex-grow-1 d-flex align-items-center border-end"
                 style={{ height: "200px" }}
               >
-                <div className=" ">
+                <div className="px-5">
                   <h4 className="fw-bold mb-0">Bạch Thành Long</h4>
                   <p className="text-muted mb-1">I am a Fullstack Developer</p>
                   <div className="d-flex gap-2 mt-3">
                     <button
-                      className=" edu-card  btn btn-light shadow-sm"
+                      className="   btn  shadow-sm"
                       style={{ color: "#878e99" }}
                     >
                       <FaFacebookF style={{ fontSize: "20px" }} />
                     </button>
                     <button
-                      className="edu-card  btn btn-light shadow-sm mx-3"
+                      className="  btn  shadow-sm mx-3"
                       style={{ color: "#878e99" }}
                     >
                       <FaInstagram style={{ fontSize: "20px" }} />
                     </button>
                     <button
-                      className=" edu-card btn btn-light shadow-sm"
+                      className="   btn  shadow-sm shadow-sm"
                       style={{ color: "#878e99" }}
                     >
                       <FaLinkedinIn style={{ fontSize: "20px" }} />
@@ -153,8 +151,8 @@ function App() {
                         : "text-dark"
                     }`
                   }
-                >Certificate
-                 
+                >
+                  Certificate
                 </NavLink>
                 <a className="nav-link text-dark" href="#">
                   Contact

@@ -17,7 +17,7 @@
   --gradient-box-w: linear-gradient(145deg, #e2e8ec, #fff);
   --gradient-red-hover: linear-gradient(145deg, #ff014f, #d11414);
   --gradient-pink-hover: linear-gradient(145deg, #ff7ca5, #f58b8b);
-  --gradient-green-hover:linear-gradient(145deg, #4fc577, #15af4a);
+  --gradient-green-hover: linear-gradient(145deg, #4fc577, #15af4a);
   --gradient-main: linear-gradient(134deg, #ffe0d1, #fff);
 
   /*  */
@@ -84,6 +84,22 @@ body {
     position: relative;
     /* top: -70px;
      */
+  }
+}
+
+.bg-header {
+  border-radius: 20px;
+  /* background: linear-gradient(45deg, #fffcf6, #fff0d9); */
+  button {
+    background: linear-gradient(45deg, #ffffff, #fefcf3);
+  }
+  button:hover {
+    background: linear-gradient(45deg, #ffffff, #fff4ed);
+    color: rgb(141 139 139) !important;
+  }
+  img {
+    background: #fffaf3;
+    border-radius: 10% !important;
   }
 }
 
