@@ -1,13 +1,13 @@
 // src/store/postSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
+import {api} from "../Data/api";
 // Cho phép truyền categoryId động vào
 export const fetchPostsByCategory = createAsyncThunk(
   "posts/fetchByCategory",
   async (categoryId) => {
     const response = await axios.get(
-      `http://localhost/wordpress/wp-json/wp/v2/posts?categories=${categoryId}&_embed`
+      `${api}/wp-json/wp/v2/posts?categories=${categoryId}&_embed`
     );
     return {
       categoryId,
