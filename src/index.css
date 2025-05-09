@@ -235,6 +235,10 @@ body {
     left: 25px;
   }
 }
+
+.avatar-header{
+  background: linear-gradient(45deg, #fffcf6, #ffe6be);
+}
 /* My Page */
 
 .my_page {

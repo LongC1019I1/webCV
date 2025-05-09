@@ -46,7 +46,7 @@ function App() {
               <div className=" d-flex justify-content-center">
                 <img
                   src={logo}
-                  className="border border-3 rounded"
+                  className="border border-3 rounded avatar-header"
                   style={{ width: "170px" }}
                   alt="avatar"
                 />
