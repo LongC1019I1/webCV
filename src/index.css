@@ -2,6 +2,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --gray: #585a5e;
   --font-primary: "Poppins", sans-serif;
   --color-body: #ffedd3;
   /* --color-card: #ff014f; */
@@ -74,29 +75,73 @@ body {
 
 /* BEGIN HEADER */
 
+.header-left::before {
+  background: #dce1e4;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+}
+
+.header-right {
+  display: flex;
+  .header-right_left {
+    margin-right: 80px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
 .form-header {
   z-index: 5;
   margin-top: -100px;
 
   img {
-    width: 355px !important;
+    /* width: 355px !important; */
     height: 180px;
-    position: relative;
+    /* position: relative; */
     /* top: -70px;
      */
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header-left::before {
+    background: #dce1e4;
+    bottom: -13px;
+    content: "";
+    height: 1px;
+    position: absolute;
+    right: 0%;
+    left: 2%;
+    top: 100%;
+    width: 100%;
+  }
+  .header-right {
+    padding-left: 16%;
+    text-align: justify;
+  }
+  .my-info {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header-right {
+    text-align: center;
+  }
+  .box-right {
+    margin-left: -24px !important;
   }
 }
 
 .bg-header {
   border-radius: 20px;
   /* background: linear-gradient(45deg, #fffcf6, #fff0d9); */
-  button {
-    background: linear-gradient(45deg, #ffffff, #fefcf3);
-  }
-  button:hover {
-    background: linear-gradient(45deg, #ffffff, #fff4ed);
-    color: rgb(141 139 139) !important;
-  }
   img {
     background: #fffaf3;
     border-radius: 10% !important;
@@ -117,15 +162,27 @@ body {
 }
 
 .social-share {
-  margin-left: 30px;
-
   button {
-    color: rgb(135, 142, 153);
     height: 53px;
     line-height: 53px;
     width: 53px;
+    transition: all 0.05s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
 
+  button:hover {
+    transform: translateY(-5px);
+    transition-duration: 0.05s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ebc8a2, #f3d9be);
+    color: white !important;
+    cursor: pointer;
+
+    .text-muted {
+      transition-duration: 0.3s;
+      color: rgb(255, 255, 255) !important;
+    }
+  }
   svg {
     font-size: 20px;
     margin: auto;

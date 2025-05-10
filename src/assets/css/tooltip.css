@@ -20,7 +20,9 @@
 }
 
 /* Main color settings */
-
+.color-gray{
+  color: var(--gray);
+}
 .color-red {
   color: var(--color-red) !important;
 }

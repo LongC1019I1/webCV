@@ -37,61 +37,79 @@ function App() {
         />
         <div className="position-relative container form-header ">
           <div className="bg-header row bg-white  shadow d-flex align-items-center p-4 gap-4 flex-wrap">
-            <div className="col-md-6 d-flex  justify-content-start  ">
-              <div className="w-25">
-                <img
-                  src={logo}
-                  className="border border-2 mr-3 "
-                  alt="avatar"
-                />
+            <div className=" d-flex col-md-12 col-lg-5 row  position-relative header-left   ">
+              <div className="col-lg-12 col-xl-6 d-flex justify-content-center">
+                <img src={logo} className="border border-2 " alt="avatar" />
               </div>
 
               <div
-                className="social-share flex-grow-1 d-flex align-items-center border-end"
+                className="col-lg-12 px-2   col-xl-6 d-flex align-items-center my-info "
                 style={{ height: "200px" }}
               >
-                <div className="px-5">
-                  <h4 className="fw-bold mb-0">Bạch Thành Long</h4>
-                  <p className="text-muted mb-1">I am a Fullstack Developer</p>
-                  <div className="d-flex gap-2 mt-3">
+                <div className="ml-4 row">
+                  <div className="col-12 ">
+                    <h4 className="fw-bold mb-0 text-center color-gray ">
+                      Bạch Thành Long
+                    </h4>
+                    <p className="text-muted mt-1 text-center">
+                      I am a Fullstack Developer
+                    </p>
+                  </div>
+
+                  <div className="col-12 mt-3 d-flex  social-share  justify-content-center">
                     <button
-                      className="   btn  shadow-sm"
+                      className="  btn  shadow-sm"
                       style={{ color: "#878e99" }}
                     >
-                      <FaFacebookF style={{ fontSize: "20px" }} />
+                      <FaFacebookF
+                        className="text-muted"
+                        style={{ fontSize: "22px" }}
+                      />
                     </button>
                     <button
                       className="  btn  shadow-sm mx-3"
                       style={{ color: "#878e99" }}
                     >
-                      <FaInstagram style={{ fontSize: "20px" }} />
+                      <FaInstagram
+                        className="text-muted"
+                        style={{ fontSize: "22px" }}
+                      />
                     </button>
                     <button
                       className="   btn  shadow-sm shadow-sm"
                       style={{ color: "#878e99" }}
                     >
-                      <FaLinkedinIn style={{ fontSize: "20px" }} />
+                      <FaLinkedinIn
+                        className="text-muted"
+                        style={{ fontSize: "22px" }}
+                      />
                     </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="row col-md-6 text-muted small w-50">
-              <div className="col-6">
-                <div>
-                  <strong>Email:</strong> bachthanhlong.it@gmail.com
+            <div className="row box-right col-md-12 col-lg-6  ">
+              <div className="header-right row">
+                <div className="header-right_left col-lg-12 col-xl-4 col-md-4 ">
+                  <div className="mb-3">
+                    <strong className="color-gray">EMAIL:</strong> <br></br>
+                    bachthanhlong.it@gmail.com
+                  </div>
+                  <div>
+                    <strong className="color-gray">PHONE:</strong> <br></br>{" "}
+                    +84363632015
+                  </div>
                 </div>
-                <div>
-                  <strong>Phone:</strong> +84363632015
-                </div>
-              </div>
-              <div className="col-6">
-                <div>
-                  <strong>Birthday:</strong> 10 Oct
-                </div>
-                <div>
-                  <strong>Location:</strong> Trần Phú, Hà Đông, Hà Nội
+                <div className="header-right_right col-lg-12 col-xl-6 col-md-6 ">
+                  <div className="mb-3">
+                    <strong className="color-gray">BIRTHDAY:</strong> <br></br>{" "}
+                    10 Oct
+                  </div>
+                  <div>
+                    <strong className="color-gray">LOCATION:</strong> <br></br>{" "}
+                    Trần Phú, Hà Đông, Hà Nội
+                  </div>
                 </div>
               </div>
             </div>
