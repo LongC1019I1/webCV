@@ -122,7 +122,7 @@ function App() {
         <div className="row">
           {/* Sidebar */}
           <div className="menu col-md-12 col-lg-2">
-            <div className="bg-white  shadow p-3">
+            <div className="bg-white shadow ">
               <nav className="nav flex-column gap-2">
                 <NavLink
                   to="/resume"

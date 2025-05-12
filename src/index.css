@@ -94,8 +94,6 @@ body {
   }
 }
 
-
-
 .form-header {
   z-index: 5;
   margin-top: -100px;
@@ -163,7 +161,7 @@ body {
 /* --------------------------------------------------- */
 
 /* BEGIN CONTENT */
-.box-content{
+.box-content {
   margin-top: 45px;
 }
 .menu {
@@ -175,6 +173,10 @@ body {
   > .bg-white {
     border-radius: 15px;
   }
+
+  .shadow {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
 }
 
 .nav-link {
@@ -184,7 +186,6 @@ body {
   height: 90px;
   width: 95%;
   margin: auto;
-
 }
 
 .nav-link.active,
@@ -194,7 +195,6 @@ body {
   color: white !important;
   border-radius: var(--bs-border-radius) !important;
   width: 95%;
-  
 }
 
 /*  */
@@ -278,6 +278,7 @@ body {
   margin-top: 0;
   padding-right: 44px;
   background: linear-gradient(45deg, #ffe0d1, #fff);
+  margin-bottom: 22px;
   .zoom-image {
     transform: scale(1.03);
     object-fit: cover;
@@ -289,10 +290,14 @@ body {
 /* My Page */
 
 .my_page {
+  .col-xl-4 {
+    /* width: 32%; */
+  }
   .my-card {
     /* width: 90%; */
     background: var(--gradient-box-w);
     box-shadow: var(--shadow-white-3);
+
     img {
       height: 187px;
       object-fit: cover;
@@ -310,9 +315,9 @@ body {
 
 .my_page_container {
   display: flex;
+  justify-content: space-between;
   .col-md-4 {
     width: 30.333333% !important;
-    margin-right: 20px;
   }
 }
 

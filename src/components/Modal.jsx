@@ -63,10 +63,10 @@ const Modal = ({ post, onClose, type }) => {
         <button onClick={handleClose} className="close-button color-pink ">
           <IoMdClose size={20} />
         </button>
-        <div className="row my-4 ">
+        <div className="row mb-4 mt-5 ">
           <div
             className={`${
-              type === "work" ? "col-6" : "modal-post"
+              type === "work" ? "col-md-6 col-sm-12" : "modal-post"
             } modal-image`}
           >
             {post.title.rendered == "Lumi App Desktop" ? (
@@ -107,8 +107,8 @@ const Modal = ({ post, onClose, type }) => {
 
           {/* <div className="col-6 
           modal-details "></div> */}
-          <div className={type == "work" ? "col-6" : ""}>
-            <p className="text-muted mb-3 fw-semibold mb-1">
+          <div className={type == "work" ? "col-md-6 col-sm-12" : ""}>
+            <p className="text-muted my-3 fw-semibold  modal-breadcrum">
               DỰ ÁN -{" "}
               <strong>
                 {tagNames.map((tag) => {

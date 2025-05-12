@@ -18,12 +18,12 @@ const MyPage = ({ id, type }) => {
   if (loading) return <p>Đang tải bài viết...</p>;
 
   return (
-    <div className="my_page  ">
-      <div className="row g-4 pt-4 px-5 mb-3 my_page_container">
+    <div className="my_page py-4 ">
+      <div className="row g-4 pt-4 px-5  my_page_container">
         {posts &&
           posts.map((post, index) => (
             <div
-              className="col-md-4 d-flex justify-content-center my-card rounded p-4  cusor pointer"
+              className="col-lg-6 col-xl-4 col-sm-12 mb-4 d-flex  justify-content-center my-card rounded p-4  cusor pointer"
               key={index}
             >
               <div

@@ -1,4 +1,44 @@
-@media only screen and (max-width: 992px) {
+@media (min-width: 1200px) {
+  .my_page {
+    .col-xl-4 {
+      width: 32%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .my_page {
+    .col-lg-6 {
+      width: 48%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .my_page {
+    .col-sm-12 {
+      width: 100%;
+    }
+    .my-card {
+      img {
+        height: 100% !important;
+      }
+    }
+  }
+
+  .modal-image {
+    iframe {
+      height: 350px;
+      margin-left: 15px;
+    }
+  }
+
+  .modal-breadcrum {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
   .box-content {
     margin-top: 0 !important;
   }
@@ -16,15 +56,16 @@
   }
 
   .menu {
-    /* background: blue; */
+    margin: 30px 0;
     padding: 0 !important;
     display: flex;
     .bg-white {
       width: 100%;
     }
-
-    margin: 30px 0;
-
+    .shadow {
+      
+      /* padding: 15rem; */
+    }
     .nav {
       flex-wrap: nowrap !important;
     }
@@ -54,6 +95,9 @@
 }
 
 @media only screen and (max-width: 540px) {
+  .box-content {
+    margin-top: 35px !important;
+  }
   .menu {
     position: fixed;
     bottom: -22px;
