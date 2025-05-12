@@ -1,0 +1,64 @@
+@media only screen and (max-width: 992px) {
+  .box-content {
+    margin-top: 0 !important;
+  }
+
+  .header-left::before {
+    background: #dce1e4;
+    bottom: -13px;
+    content: "";
+    height: 1px;
+    position: absolute;
+    right: 0%;
+    left: 2%;
+    top: 100%;
+    width: 100%;
+  }
+
+  .menu {
+    /* background: blue; */
+    padding: 0 !important;
+    display: flex;
+    .bg-white {
+      width: 100%;
+    }
+
+    margin: 30px 0;
+
+    .nav {
+      flex-wrap: nowrap !important;
+    }
+
+    .nav-link {
+      height: 56px !important;
+    }
+    .flex-column {
+      flex-direction: row !important;
+    }
+  }
+  .header-right {
+    padding-left: 16%;
+    text-align: justify;
+  }
+  .my-info {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header-right {
+    text-align: center;
+  }
+  .box-right {
+    margin-left: -24px !important;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .menu {
+    position: fixed;
+    bottom: -22px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+}

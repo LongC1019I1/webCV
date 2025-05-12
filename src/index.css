@@ -39,7 +39,7 @@
 @import "tailwindcss";
 @import "./assets/css/tooltip.css";
 @import "./assets/css/modal.css";
-
+@import "./assets/css/responsive.css";
 .no-wrap {
   display: block;
   white-space: nowrap;
@@ -94,8 +94,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1200px) {
-}
+
 
 .form-header {
   z-index: 5;
@@ -107,35 +106,6 @@ body {
     /* position: relative; */
     /* top: -70px;
      */
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .header-left::before {
-    background: #dce1e4;
-    bottom: -13px;
-    content: "";
-    height: 1px;
-    position: absolute;
-    right: 0%;
-    left: 2%;
-    top: 100%;
-    width: 100%;
-  }
-  .header-right {
-    padding-left: 16%;
-    text-align: justify;
-  }
-  .my-info {
-    justify-content: center;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .header-right {
-    text-align: center;
-  }
-  .box-right {
-    margin-left: -24px !important;
   }
 }
 
@@ -193,14 +163,17 @@ body {
 /* --------------------------------------------------- */
 
 /* BEGIN CONTENT */
-
+.box-content{
+  margin-top: 45px;
+}
 .menu {
   font-size: 1.25rem;
+  padding-right: 27px;
+
   padding-left: 0px;
 
-  /* width: 95%; */
-  > div {
-    width: 190px;
+  > .bg-white {
+    border-radius: 15px;
   }
 }
 
@@ -209,6 +182,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 90px;
+  width: 95%;
+  margin: auto;
+
 }
 
 .nav-link.active,
@@ -217,6 +193,8 @@ body {
   color: var(--color-text-main) !important;
   color: white !important;
   border-radius: var(--bs-border-radius) !important;
+  width: 95%;
+  
 }
 
 /*  */

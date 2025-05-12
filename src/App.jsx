@@ -118,11 +118,11 @@ function App() {
       </div>
 
       {/* Main Layout */}
-      <div className="container tab-content-wrapper pt-5">
+      <div className="container tab-content-wrapper box-content">
         <div className="row">
           {/* Sidebar */}
-          <div className="menu col-md-2 mb-4">
-            <div className="bg-white rounded shadow p-3">
+          <div className="menu col-md-12 col-lg-2">
+            <div className="bg-white  shadow p-3">
               <nav className="nav flex-column gap-2">
                 <NavLink
                   to="/resume"
@@ -180,7 +180,7 @@ function App() {
           </div>
 
           {/* Blog Cards */}
-          <div className="col-md-10 rounded bg-white ">
+          <div className=" col-md-12 col-lg-10 rounded bg-white ">
             <Routes>
               <Route path="/" element={<MyPage />} />
               <Route path="/blog" element={<MyPage id={13} />} />
