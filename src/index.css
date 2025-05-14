@@ -215,6 +215,10 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
+.edu-content_desc {
+  line-height: 36px;
+}
+
 .edu-card:hover {
   /* transform: translateY(-5px); */
   transition-duration: 0.05s;

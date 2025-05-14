@@ -11,7 +11,7 @@ const skills = {
     { label: "AGILE - KABAN", value: 85 },
     { label: "DISC", value: 80 },
     { label: "THẦN SỐ HỌC", value: 70 },
-    { label: "THẤU HIỂU TÂM LÝ", value: 80 },
+    { label: "THẤU HIỂU NỘI TÂM ", value: 80 },
   ],
   development: [
     { label: "HTML + CSS", value: 85 },
@@ -27,11 +27,12 @@ const edu = [
     subtitle: "TRƯỜNG FPT POLYTECHNIC (9/2014 – 12/2016)",
     description: `<p>Xếp loại: Giỏi - Điểm trung bình 8.3</p>
       <p>TIẾNG ANH: TOP NOTCH 2.2 ~ 4.0 IELTS</p>
-      <p>Kiến thức cơ bản về Công nghệ thông tin, mạng máy tính
-Quản trị, vận hành hệ quản trị cơ sở dữ liệu
-Thiết kế các ấn phẩm số với Photoshop và Illustrator
-Cài đặt và bảo trì phần cứng, phần mềm
-Thiết kế, xây dựng và quản trị website </p>
+      <p clas='edu-content_desc'>
+🔹 Kiến thức cơ bản về Công nghệ thông tin và Network</br>
+🔹 Quản trị, vận hành hệ quản trị cơ sở dữ liệu</br>
+🔹 Thiết kế các ấn phẩm số với Photoshop và Illustrator</br>
+🔹 Cài đặt và bảo trì phần cứng, phần mềm</br>
+🔹 Thiết kế, xây dựng và quản trị Website </p>
       `,
     score: "8.3/10",
     highlight: true,
@@ -39,14 +40,13 @@ Thiết kế, xây dựng và quản trị website </p>
   {
     title: "TRUNG TÂM ĐÀO TẠO LẬP TRÌNH VIÊN CODEGYM",
     subtitle: "Công ty CP CodeGym Việt Nam (11/2019 – 4/2020)",
-    description: `<ul>
-<li>Sử dụng thành thạo ngôn ngữ JavaScript và PHP</li>
-<li>Xây dựng được sản phẩm website hoàn chỉnh</li>
-<li>Có được tư duy lập trình tốt</li>
-<li>Thành thạo các công nghệ Laravel, MySQL, Angular… và kỹ thuật lập trình: cấu trúc dữ liệu, Cleancode…</li>
-<li>Vận dụng tốt Agile – mô hình phát triển phần mềm phổ biến toàn cầu</li>
-<li>Nắm chắc kiến thức luyện thi Chứng chỉ Lập trình Quốc tế (OCA)</li>
-</ul>`,
+    description: ` <p clas='edu-content_desc'>
+🔹 Sử dụng thành thạo ngôn ngữ JavaScript và PHP</br>
+🔹 Xây dựng được sản phẩm website hoàn chỉnh</br>
+🔹 Có được tư duy lập trình tốt</br>
+🔹 Thành thạo các công nghệ Laravel, MySQL, Angular… và kỹ thuật lập trình: cấu trúc dữ liệu, Cleancode…</br>
+🔹 Vận dụng tốt Agile – mô hình phát triển phần mềm phổ biến toàn cầu</br>
+</p>`,
     score: "4.7/5.0",
     highlight: false,
   },
@@ -55,22 +55,14 @@ Thiết kế, xây dựng và quản trị website </p>
     subtitle: "Công ty CP Tổ Chức Đào Tạo WIT (07/2022 – 3/2023)",
     description: `<section>
   <h5>Kỹ năng & Năng lực đạt được (Mentor WiT)</h5>
- 
-    <li>Kỹ năng Tư vấn & Huấn luyện cá nhân và đội nhóm</li>
-    <li>Kỹ năng giao tiếp và truyền cảm hứng sâu sắc</li>
-    <li>Năng lực thấu hiểu và dẫn dắt nội tâm con người</li>
-    <li>Kỹ năng nâng tầm nhận thức – chuyển hóa tư duy</li>
-    <li>Kỹ năng khai vấn dựa trên nền tảng Nhân – Duyên – Quả</li>
-    <li>Kỹ năng huấn luyện thể chất: chạy bền 21km trên cát, bơi biển 2km</li>
-    <li>Năng lực quản trị toàn diện 4 lĩnh vực:
-      <ul>
-        <li>* Nội tâm</li>
-        <li>* Sức khỏe</li>
-        <li>* Mối quan hệ</li>
-        <li>* Tài chính</li>
-      </ul>
-    </li>
-   
+ <p class='mt-1'>
+    🔹 Kỹ năng Tư vấn & Huấn luyện cá nhân và đội nhóm</br>
+    🔹 Kỹ năng giao tiếp và truyền cảm hứng</br>
+    🔹 Năng lực thấu hiểu và dẫn dắt nội tâm con người</br>
+    🔹 Kỹ năng nâng tầm nhận thức – chuyển hóa tư duy</br>
+    🔹 Kỹ năng khai vấn để đối tượng nghe tự có câu trả lời giải quyết khó khăn của bản thân</br>
+    🔹 Kỹ năng: Chạy bền 21km trên cát, bơi biển 2km</br>
+   </p>
   </ul>
 </section>`,
     score: "Tốt/Giỏi",
@@ -83,13 +75,13 @@ const job = [
     title: "Nhân viên SEO & Kỹ thuật",
     subtitle: "Laptop Đức Việt ( 2017 - 2019 )",
     description: `  <h5>Mô tả công việc:</h5>
-  <ul>
-    <li>SEO website bán hàng – tối ưu nội dung và từ khóa.</li>
-    <li>Tư vấn bán hàng, giới thiệu sản phẩm phù hợp nhu cầu khách hàng.</li>
-    <li>Lắp đặt, cấu hình phần cứng và cài đặt hệ điều hành.</li>
-    <li>Hỗ trợ kỹ thuật – xử lý sự cố cho khách hàng.</li>
-    <li>Quản lý thiết bị, bảo trì máy tính định kỳ.</li>
-  </ul>`,
+  <p class='edu-conent_desc'>
+    🔹SEO website bán hàng – tối ưu nội dung và từ khóa.</br>
+    🔹Tư vấn bán hàng, giới thiệu sản phẩm phù hợp nhu cầu khách hàng.</br>
+    🔹Lắp đặt, cấu hình phần cứng và cài đặt hệ điều hành.</br>
+    🔹Hỗ trợ kỹ thuật – xử lý sự cố cho khách hàng.</br>
+    🔹Quản lý thiết bị, bảo trì máy tính định kỳ.</br>
+  </p>`,
     score: "4.30",
     highlight: true,
   },
@@ -97,22 +89,21 @@ const job = [
     title: "Lập trình viên Fullstack ",
     subtitle: "Công ty Cổ Phần Nhà Thông Minh Lumi (2020 – 2023)",
     description: `  <h5>Mô tả công việc:</h5>
-  <ul>
-    <li>Phát triển API backend để kết nối và điều khiển thiết bị nhà thông minh cho các đối tác.</li>
-    <li>Xây dựng giao diện web desktop ứng dụng Lumi App.</li>
-    <li>Phân tích, thiết kế hệ thống backend, đánh giá và tối ưu các tính năng mới và cũ.</li>
-    <li>Viết tài liệu kỹ thuật, đảm bảo chất lượng và tiến độ dự án.</li>
-    <li>Hợp tác chặt chẽ cùng team kỹ thuật theo mô hình Agile/Scrum.</li>
-  </ul>
+  <p>
+   🔹 Phát triển API backend để kết nối và điều khiển thiết bị nhà thông minh cho công ty.</br>
+   🔹 Xây dựng giao diện web Desktop ứng dụng Lumi App.</br>
+   🔹 Phân tích, thiết kế hệ thống backend, đánh giá và tối ưu các tính năng mới và cũ.</br>
+   🔹 Viết tài liệu kỹ thuật, đảm bảo chất lượng và tiến độ dự án.</br>
+  </p>
 
   <h5>Công nghệ sử dụng:</h5>
-  <ul>
-    <li><strong>Backend:</strong> PHP (Yii2), NodeJS, RESTful API, JSON</li>
-    <li><strong>Frontend:</strong> JavaScript, HTML/CSS (Web App)</li>
-    <li><strong>Database:</strong> MySQL, PostgreSQL, MongoDB</li>
-    <li><strong>Realtime / Message Queue:</strong> MQTT, RabbitMQ, Kafka (ưu tiên)</li>
-    <li><strong>Khác:</strong> Git, Linux (Ubuntu, CentOS), LEMP stack</li>
-  </ul>`,
+  <p class='mt-2'>
+   🔹 <strong>Backend:</strong> PHP (Yii2), NodeJS, RESTful API, JSON</br>
+   🔹 <strong>Frontend:</strong> JavaScript, HTML/CSS (Web App)</br>
+   🔹 <strong>Database:</strong> MySQL, PostgreSQL, MongoDB</br>
+   🔹 <strong>Realtime / Message Queue:</strong> MQTT, RabbitMQ, Kafka (ưu tiên)</br>
+   🔹 <strong>Khác:</strong> Git, Linux (Ubuntu, CentOS), LEMP stack</br>
+  </p>`,
     score: "4.70",
     highlight: false,
   },
@@ -120,9 +111,9 @@ const job = [
     title: "Freelancer – Kinh doanh & Chăm sóc Sức khỏe  ",
     subtitle: "(2024 – nay)",
     description: `  <h5>Mô tả công việc:</h5>
-  <li>Quản lý và vận hành web Shopee <a className='text-secondary' href="https://shopee.vn/bobestore688" target="_blank">Bobe Store 688</a>, và fanpage bán hàng online <a className='text-secondary' href="https://www.facebook.com/KousCorner" target="_blank">KousCorner</a>, xử lý đơn hàng và chăm sóc khách hàng</li>
-    <li>Khởi xướng và điều phối CLB chăm sóc sức khỏe Herbalife, tổ chức các buổi chia sẻ và kết nối cộng đồng</li>
-    <li>Phát triển kỹ năng tổ chức, làm việc nhóm, giao tiếp và giải quyết vấn đề – nền tảng quan trọng trong môi trường Agile/Scrum</li>`,
+    <p>
+  🔹 Quản lý và vận hành web Shopee <a className='text-secondary' href="https://shopee.vn/bobestore688" target="_blank">Bobe Store 688</a>, và fanpage bán hàng online <a className='text-secondary' href="https://www.facebook.com/KousCorner" target="_blank">KousCorner</a>, xử lý đơn hàng và chăm sóc khách hàng</br>
+  🔹 Khởi xướng và điều phối  <a className='text-secondary' href="https://maps.app.goo.gl/8H1e6nLKFimygikH7" target="_blank">Nhóm Dinh Dưỡng  </a>, CLB Chăm Sóc Sức Khỏe, tổ chức các buổi chia sẻ và kết nối cộng đồng, giao tiếp và giải quyết vấn đề – nền tảng quan trọng trong môi trường Agile/Scrum</br></p>`,
     score: "4.70",
     highlight: false,
   },
@@ -138,7 +129,7 @@ const ExperienceSkills = () => {
 
       const scrollPercentage = (scrollTop + windowHeight) / documentHeight;
 
-      if (scrollPercentage >= 0.98) {
+      if (scrollPercentage >= 0.93) {
         setInView(true); // Kích hoạt progress bar
       } else {
         setInView(false); // Ẩn lại nếu cần
@@ -166,7 +157,7 @@ const ExperienceSkills = () => {
           {/* Info */}
           <div className="col-lg-7 " style={{ "padding-left": "20px" }}>
             <p className="text-uppercase color_main fw-bold small">
-              Visit my portfolio & hire me
+              WELCOME TO my PROFILE
             </p>
             <AboutMe />
             <p className="text-muted">
@@ -174,14 +165,14 @@ const ExperienceSkills = () => {
               trong việc phát triển hệ thống Web App cả Frontend và Backend. Tôi
               từng làm việc tại công ty công nghệ nhà thông minh Lumi, tham gia
               phát triển API, thiết kế hệ thống backend, và xây dựng ứng dụng
-              desktop web. Đồng thời, tôi còn có kinh nghiệm kinh doanh tự do và
+              Desktop web. Đồng thời, tôi còn có kinh nghiệm kinh doanh tự do và
               điều phối cộng đồng, giúp tôi phát triển kỹ năng giao tiếp, làm
-              việc nhóm và tư duy tổ chức theo mô hình Scrum.
+              việc tổ chức đội nhóm đặc biệt là theo mô hình Scrum.
             </p>
             <p className="text-muted">
-              Tôi đam mê công nghệ, yêu thích khám phá nội tâm con người, và
-              luôn hướng đến việc xây dựng đội ngũ vững mạnh – cả về chuyên môn
-              lẫn văn hóa.
+              Tôi đam mê công nghệ, yêu thích làm việc với con người, và đặc
+              biệt là khám phá nội tâm con người, Tôi luôn rất muốn được tham dự
+              và xây dựng được đội ngũ vững mạnh – cả về chuyên môn lẫn văn hóa.
             </p>
             <div className="mt-4">
               <h5 className="h5 text-success fw-bold">🌱 Triết lý làm việc</h5>
@@ -195,7 +186,8 @@ const ExperienceSkills = () => {
                 </b>{" "}
                 – nơi con người được phát triển và văn hóa được vun đắp. Khi đội
                 ngũ đủ mạnh và giá trị chung đủ rõ ràng, mọi công cụ và phương
-                pháp chỉ còn là chất xúc tác để bứt phá.
+                pháp chỉ còn là chất xúc tác để bứt phá hướng đến mọi mục tiêu
+                mà chúng ta mong muốn.
               </p>
             </div>
           </div>
@@ -203,8 +195,11 @@ const ExperienceSkills = () => {
 
         <div className="d-flex justify-content-center">
           {" "}
-          <button className="  bg-light btn  mt-1 shadow">
-            Download My CV
+          <button
+            className=" edu-card btn  mt-1 shadow"
+            style={{ height: "40px", "line-height": "40px", padding: "0 15px" }}
+          >
+            <p className="text-muted">Download My CV</p>
           </button>
         </div>
 
@@ -227,10 +222,10 @@ const ExperienceSkills = () => {
                 </div>
 
                 <p className="mb-3 text-muted" style={{ textAlign: "justify" }}>
-                  Tôi không chỉ vận hành đội ngũ theo phương pháp{" "}
+                  Tôi không chỉ hiểu và vận hành đội ngũ theo phương pháp{" "}
                   <strong>Agile/Scrum</strong>, mà còn kết hợp những công cụ
                   khám phá con người như <strong>DISC</strong> và{" "}
-                  <strong>Thần số học</strong> để hiểu sâu từng cá nhân. Từ đó
+                  <strong>Thần Số Học</strong> để hiểu sâu từng cá nhân. Từ đó
                   tôi thiết kế văn hóa đội nhóm phù hợp và nuôi dưỡng động lực
                   từ bên trong.
                 </p>
@@ -337,10 +332,7 @@ const ExperienceSkills = () => {
               key={index}
               className={`edu-card-2 p-4 position-relative rounded-3 mb-3  bg-light`}
             >
-     
-              <h5 className="fw-bold title" >
-                {item.title}
-              </h5>
+              <h5 className="fw-bold title">{item.title}</h5>
               <small className="text-muted d-block mb-3 subtitle ">
                 {item.subtitle}
               </small>
