@@ -75,15 +75,26 @@ body {
 
 /* BEGIN HEADER */
 
-.header-left::before {
-  background: #dce1e4;
-  bottom: 0;
-  content: "";
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 1px;
+.header-title {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -51px;
+  font-size: 30px;
+  text-align: center;
+  background-image: radial-gradient(
+      circle,
+      rgba(245, 235, 186, 0.5) 0%,
+      rgba(235, 166, 54, 0.5) 100%
+    ),
+    /* url(https://media.istockphoto.com/id/1192780580/vi/anh/n%C3%BAi-ph%C3%BA-s%C4%A9-c%C3%A2y-phong-%C4%91%E1%BB%8F-v%C3%A0-thuy%E1%BB%81n-ng%C6%B0-d%C3%A2n-v%E1%BB%9Bi-s%C6%B0%C6%A1ng-m%C3%B9-bu%E1%BB%95i-s%C3%A1ng-v%C3%A0o-m%C3%B9a-thu-h%E1%BB%93-kawaguchiko.jpg?s=2048x2048&w=is&k=20&c=3Im2EeXBOXpiOVDJcFQrz6kSaJavyZZ3fMTIDD9kdy4=) */
+      url("./assets/img/bg-header.jpg");
+  color: white;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.6);
+  background-position: 79% 36%;
+  font-style: italic;
 }
 
 .header-right {
@@ -218,15 +229,46 @@ body {
   }
 }
 
-.edu-card-2:hover {
-  transition-duration: 0.05s;
-  /* background: linear-gradient(135deg, #bfbebc, #4f4e4e); */
-  background: linear-gradient(135deg, #ffe3ab, #f9ded5);
-  li {
-    color: #8b8b8b;
+.edu-card-2 {
+  cursor: pointer;
+  transition: all 0.05s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  h5 {
+    font-weight: bold;
   }
+}
+
+.edu-card-2:hover {
+  transition-duration: 0.3s;
+
+  background: linear-gradient(135deg, #ffe3ab, #f9ded5);
+  .title {
+    transition-duration: 0.3s;
+    color: #d95b5b;
+  }
+  .subtitle {
+    color: #504e4e !important;
+  }
+  .edu-content {
+    transition-duration: 0.3s;
+    color: #d95b5b;
+    h5 {
+      transition-duration: 0.3s;
+      /* font-weight: bold; */
+      color: #504e4e;
+    }
+    li {
+      transition-duration: 0.3s;
+      color: #504e4e;
+    }
+  }
+
   a {
-    color: rgb(255, 255, 255) !important;
+    /* color: rgb(255, 255, 255) !important; */
+    /* transition-duration: 0.3s; */
+    color: #504e4e !important;
+
+    /* font-weight: bold; */
   }
 }
 
@@ -260,14 +302,16 @@ body {
 
 .progress.gradient-bar {
   height: 15px;
-  background-color: #e4e4e4;
+  /* background-color: #e4e4e4; */
+  background: #ffeede;
   border-radius: 10px;
   overflow: hidden;
   padding: 2px;
 }
 
 .progress-bar {
-  background: linear-gradient(to right, #ffffff, #9f9397);
+  /* background: linear-gradient(to right, #ffffff, #9f9397); */
+  background: linear-gradient(to right, #ffffff, #ffb37d);
   height: 100%;
   transition: width 1.5s ease-in-out;
   border-radius: 10px;

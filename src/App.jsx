@@ -28,13 +28,16 @@ function App() {
   return (
     <div className="App pb-5">
       {/* Header */}
+      <div className="header-title">
+        " Mọi thành công viên mãn đều đến<br></br> từ môi trường tốt "
+      </div>
       <div className="">
-        <img
+        {/* <img
           src={bg}
           className="img-fluid w-100 "
           style={{ height: "300px" }}
           alt="header"
-        />
+        /> */}
         <div className="position-relative container form-header ">
           <div className="bg-header row bg-white  shadow d-flex align-items-center p-4 gap-4 flex-wrap">
             <div className=" d-flex col-md-12 col-lg-5 row  position-relative header-left   ">

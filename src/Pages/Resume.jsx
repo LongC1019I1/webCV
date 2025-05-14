@@ -182,7 +182,7 @@ const ExperienceSkills = () => {
 
         <div className="d-flex justify-content-center">
           {" "}
-          <button className=" edu-card  bg-light btn  mt-1 shadow">
+          <button className="  bg-light btn  mt-1 shadow">
             Download My CV
           </button>
         </div>
@@ -288,15 +288,20 @@ const ExperienceSkills = () => {
           {edu.map((item, index) => (
             <div
               key={index}
-              className={`edu-card edu-card-2  p-4 position-relative rounded-3 mb-3  bg-light`}
+              className={`edu-card-2  p-4 position-relative rounded-3 mb-3  bg-light`}
             >
               <span className="badge score-badge">{item.score}/10</span>
-              <h5 className="fw-bold" style={{ maxWidth: "395px" }}>
+              <h5 className="fw-bold title" style={{ maxWidth: "395px" }}>
                 {item.title}
               </h5>
-              <small className="text-muted d-block mb-3">{item.subtitle}</small>
+              <small className="text-muted d-block mb-3 subtitle">
+                {item.subtitle}
+              </small>
               <hr />
-              <p className={`mb-0 text-muted `}> {parse(item.description)}</p>
+              <p className={`mb-0 text-muted edu-content `}>
+                {" "}
+                {parse(item.description)}
+              </p>
             </div>
           ))}
         </div>
@@ -308,15 +313,19 @@ const ExperienceSkills = () => {
           {job.map((item, index) => (
             <div
               key={index}
-              className={`edu-card edu-card-2 p-4 position-relative rounded-3 mb-3  bg-light`}
+              className={`edu-card-2 p-4 position-relative rounded-3 mb-3  bg-light`}
             >
               <span className="badge score-badge">{item.score}/5</span>
-              <h5 className="fw-bold" style={{ maxWidth: "395px" }}>
+              <h5 className="fw-bold title" style={{ maxWidth: "395px" }}>
                 {item.title}
               </h5>
-              <small className="text-muted d-block mb-3">{item.subtitle}</small>
+              <small className="text-muted d-block mb-3 subtitle ">
+                {item.subtitle}
+              </small>
               <hr />
-              <p className={`mb-0 text-muted `}>{parse(item.description)}</p>
+              <p className={`mb-0 text-muted edu-content `}>
+                {parse(item.description)}
+              </p>
             </div>
           ))}
         </div>

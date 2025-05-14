@@ -6,6 +6,19 @@
   }
 }
 
+@media (min-width: 992px) {
+  .header-left::before {
+    background: #dce1e4;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+  }
+}
+
 @media (max-width: 1200px) {
   .my_page {
     .col-lg-6 {
@@ -39,20 +52,22 @@
 }
 
 @media only screen and (max-width: 991px) {
+  .header-title {
+    padding-left: 30px;
+  }
   .box-content {
     margin-top: 0 !important;
   }
 
   .header-left::before {
     background: #dce1e4;
-    bottom: -13px;
     content: "";
     height: 1px;
     position: absolute;
-    right: 0%;
-    left: 2%;
+    right: 0;
     top: 100%;
     width: 100%;
+    left: 12px;
   }
 
   .menu {
@@ -63,7 +78,6 @@
       width: 100%;
     }
     .shadow {
-      
       /* padding: 15rem; */
     }
     .nav {
@@ -95,6 +109,9 @@
 }
 
 @media only screen and (max-width: 540px) {
+  .header-title {
+    font-size: 26px !important;
+  }
   .box-content {
     margin-top: 35px !important;
   }
