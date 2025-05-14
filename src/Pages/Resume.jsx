@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AnimatedProgress from "../components/AnimatedProgress";
 import my_img from "../assets/img/my-profile.png";
 import { FaPeopleGroup, FaCrown } from "react-icons/fa6";
@@ -33,7 +33,7 @@ Thiết kế các ấn phẩm số với Photoshop và Illustrator
 Cài đặt và bảo trì phần cứng, phần mềm
 Thiết kế, xây dựng và quản trị website </p>
       `,
-    score: "8.3",
+    score: "8.3/10",
     highlight: true,
   },
   {
@@ -47,7 +47,7 @@ Thiết kế, xây dựng và quản trị website </p>
 <li>Vận dụng tốt Agile – mô hình phát triển phần mềm phổ biến toàn cầu</li>
 <li>Nắm chắc kiến thức luyện thi Chứng chỉ Lập trình Quốc tế (OCA)</li>
 </ul>`,
-    score: "4.70",
+    score: "4.7/5.0",
     highlight: false,
   },
   {
@@ -73,14 +73,14 @@ Thiết kế, xây dựng và quản trị website </p>
    
   </ul>
 </section>`,
-    score: "Bằng Tốt",
+    score: "Tốt/Giỏi",
     highlight: false,
   },
 ];
 
 const job = [
   {
-    title: "Nhân viên SEO & Kỹ thuật tại Laptop",
+    title: "Nhân viên SEO & Kỹ thuật",
     subtitle: "Laptop Đức Việt ( 2017 - 2019 )",
     description: `  <h5>Mô tả công việc:</h5>
   <ul>
@@ -129,6 +129,27 @@ const job = [
 ];
 
 const ExperienceSkills = () => {
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      const scrollPercentage = (scrollTop + windowHeight) / documentHeight;
+
+      if (scrollPercentage >= 0.98) {
+        setInView(true); // Kích hoạt progress bar
+      } else {
+        setInView(false); // Ẩn lại nếu cần
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="container ">
       <section className="container py-5">
@@ -290,13 +311,14 @@ const ExperienceSkills = () => {
               key={index}
               className={`edu-card-2  p-4 position-relative rounded-3 mb-3  bg-light`}
             >
-              <span className="badge score-badge">{item.score}/10</span>
-              <h5 className="fw-bold title" style={{ maxWidth: "395px" }}>
-                {item.title}
-              </h5>
-              <small className="text-muted d-block mb-3 subtitle">
-                {item.subtitle}
-              </small>
+              <div className="row">
+                <h5 className="col-10 fw-bold title">{item.title}</h5>
+                <span className="col-2 badge score-badge">{item.score}</span>
+                <small className="text-muted d-block mb-3 subtitle">
+                  {item.subtitle}
+                </small>
+              </div>
+
               <hr />
               <p className={`mb-0 text-muted edu-content `}>
                 {" "}
@@ -315,8 +337,8 @@ const ExperienceSkills = () => {
               key={index}
               className={`edu-card-2 p-4 position-relative rounded-3 mb-3  bg-light`}
             >
-              <span className="badge score-badge">{item.score}/5</span>
-              <h5 className="fw-bold title" style={{ maxWidth: "395px" }}>
+     
+              <h5 className="fw-bold title" >
                 {item.title}
               </h5>
               <small className="text-muted d-block mb-3 subtitle ">
@@ -344,7 +366,7 @@ const ExperienceSkills = () => {
                   <span className="text-uppercase small">{skill.label}</span>
                   <span className="small fw-semibold">{skill.value}%</span>
                 </div>
-                <AnimatedProgress value={skill.value} />
+                <AnimatedProgress value={inView ? skill.value : 0} />
               </div>
             ))}
           </div>
@@ -367,7 +389,7 @@ const ExperienceSkills = () => {
                   ></div>
                 </div> */}
 
-                <AnimatedProgress value={skill.value} />
+                <AnimatedProgress value={inView ? skill.value : 0} />
               </div>
             ))}
           </div>
