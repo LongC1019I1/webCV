@@ -37,10 +37,15 @@
   overflow-y: auto;
 
   .modal-post {
-    width: 100% !important;
     display: flex;
     justify-content: center;
     height: 500px;
+  }
+  .modal-image {
+    /* display: flex; */
+    img {
+      object-fit: contain;
+    }
   }
 }
 

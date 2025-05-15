@@ -2,6 +2,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import {api} from "../Data/api";
+
 // Cho phép truyền categoryId động vào
 export const fetchPostsByCategory = createAsyncThunk(
   "posts/fetchByCategory",

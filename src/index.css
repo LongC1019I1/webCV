@@ -378,3 +378,17 @@ body {
     align-items: center;
   }
 }
+/* OT */
+
+.check-list {
+  /* list-style-image: url("./assets/img/icon/dimond.png"); */
+  & li {
+    padding-left: 5px;
+    position: relative;
+    left: -13px;
+    margin-bottom: 5px;
+  }
+  & li::marker {
+    content: "🔹";
+  }
+}

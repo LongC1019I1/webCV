@@ -4,18 +4,18 @@ import Modal from "../components/Modal";
 import { useSelector } from "react-redux";
 
 const MyPage = ({ id, type }) => {
+
   const [selectedPost, setSelectedPost] = useState(null);
 
   const { dataByCategory, loading, error } = useSelector(
     (state) => state.posts
   );
 
-  console.log({ dataByCategory });
+
   const posts = dataByCategory[id];
 
-  console.log({ posts, id });
 
-  if (loading) return <p>Đang tải bài viết...</p>;
+  if (loading) return <p className="m-5">Đang tải bài viết...</p>;
 
   return (
     <div className="my_page py-4 ">

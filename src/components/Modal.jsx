@@ -63,7 +63,7 @@ const Modal = ({ post, onClose, type }) => {
         <button onClick={handleClose} className="close-button color-pink ">
           <IoMdClose size={20} />
         </button>
-        <div className="row mb-4 mt-5 ">
+        <div className="row mb-4 mt-4 ">
           <div
             className={`${
               type === "work" ? "col-md-6 col-sm-12" : "modal-post"
@@ -109,7 +109,7 @@ const Modal = ({ post, onClose, type }) => {
           modal-details "></div> */}
           <div className={type == "work" ? "col-md-6 col-sm-12" : ""}>
             <p className="text-muted my-3 fw-semibold  modal-breadcrum">
-              DỰ ÁN -{" "}
+              {location.pathname == "/blog" ? "BLOG" : "DỰ ÁN"} -{" "}
               <strong>
                 {tagNames.map((tag) => {
                   return (

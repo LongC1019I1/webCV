@@ -40,7 +40,11 @@
   }
 
   .modal-image {
+    margin: 0 !important;
+    margin-top: 20px !important;
+    height: 100% !important;
     iframe {
+      margin: auto !important;
       height: 350px;
       margin-left: 15px;
     }
@@ -106,11 +110,22 @@
   .box-right {
     margin-left: -24px !important;
   }
+
+  .check-list {
+    & li::marker {
+      content: "•" !important;
+    }
+  }
 }
 
 @media only screen and (max-width: 540px) {
   .header-title {
-    font-size: 26px !important;
+
+    background-position: 83% 23% !important;
+  }
+  .header-title_content{
+        font-size: 22px !important;
+    margin-right: 30px !important;
   }
   .box-content {
     margin-top: 35px !important;

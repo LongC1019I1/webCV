@@ -8,6 +8,7 @@ import MyPage from "./Pages/MyPage";
 import Work from "./Pages/Work";
 import Resume from "./Pages/Resume";
 import logo from "./assets//img/logo.png";
+import { useLocation } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
@@ -17,6 +18,7 @@ import {
 
 function App() {
   const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     dispatch(fetchCategories());
@@ -29,7 +31,9 @@ function App() {
     <div className="App pb-5">
       {/* Header */}
       <div className="header-title">
-        " Mọi thành công viên mãn đều đến<br></br> từ môi trường tốt "
+        <div className="header-title_content">
+          " Mọi thành công viên mãn đều đến<br></br> từ môi trường tốt "
+        </div>
       </div>
       <div className="">
         {/* <img
@@ -134,6 +138,10 @@ function App() {
                       isActive
                         ? "active bg-danger text-white rounded"
                         : "text-dark"
+                    } ${
+                      location.pathname == "/" || location.pathname == "/resume"
+                        ? "active"
+                        : ""
                     }`
                   }
                 >
@@ -175,9 +183,9 @@ function App() {
                 >
                   Certificate
                 </NavLink>
-                <a className="nav-link text-dark" href="#">
+                {/* <a className="nav-link text-dark" href="#">
                   Contact
-                </a>
+                </a> */}
               </nav>
             </div>
           </div>
@@ -185,7 +193,7 @@ function App() {
           {/* Blog Cards */}
           <div className=" col-md-12 col-lg-10 rounded bg-white ">
             <Routes>
-              <Route path="/" element={<MyPage />} />
+              <Route path="/" element={<Resume />} />
               <Route path="/blog" element={<MyPage id={13} />} />
               <Route path="/resume" element={<Resume />} />
               <Route
