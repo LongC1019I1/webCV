@@ -203,7 +203,15 @@ const ExperienceSkills = () => {
             className=" edu-card btn  mt-1 shadow"
             style={{ height: "40px", "line-height": "40px", padding: "0 15px" }}
           >
-            <p className="text-muted">Download My CV</p>
+            <a
+              style={{
+                textDecoration: "none",
+                color: "rgba(33, 37, 41, 0.75)",
+              }}
+              href="https://drive.usercontent.google.com/download?id=16hnndy1mro7rvf7sY0iqluHOg7IaseM3&export=download"
+            >
+              <p className="text-muted">Download My CV</p>
+            </a>
           </button>
         </div>
 

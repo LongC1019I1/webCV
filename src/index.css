@@ -389,6 +389,6 @@ body {
     margin-bottom: 5px;
   }
   & li::marker {
-    content: "🔹";
+    content: "🔸";
   }
 }

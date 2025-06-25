@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "./store/categorySlice";
 import { fetchPostsByCategory } from "./store/postSlice";
@@ -64,33 +64,48 @@ function App() {
                   </div>
 
                   <div className="col-12 mt-3 d-flex  social-share  justify-content-center">
-                    <button
-                      className="  btn  shadow-sm"
-                      style={{ color: "#878e99" }}
+                    <Link
+                      target="blank"
+                      to="https://www.facebook.com/thanhlong101010/"
                     >
-                      <FaFacebookF
-                        className="text-muted"
-                        style={{ fontSize: "22px" }}
-                      />
-                    </button>
-                    <button
-                      className="  btn  shadow-sm mx-3"
-                      style={{ color: "#878e99" }}
+                      <button
+                        className="  btn  shadow-sm"
+                        style={{ color: "#878e99" }}
+                      >
+                        <FaFacebookF
+                          className="text-muted"
+                          style={{ fontSize: "22px" }}
+                        />
+                      </button>
+                    </Link>
+                    <Link
+                      target="blank"
+                      to="https://www.instagram.com/bachthanhlongtc/"
                     >
-                      <FaInstagram
-                        className="text-muted"
-                        style={{ fontSize: "22px" }}
-                      />
-                    </button>
-                    <button
-                      className="   btn  shadow-sm shadow-sm"
-                      style={{ color: "#878e99" }}
+                      <button
+                        className="  btn  shadow-sm mx-3"
+                        style={{ color: "#878e99" }}
+                      >
+                        <FaInstagram
+                          className="text-muted"
+                          style={{ fontSize: "22px" }}
+                        />
+                      </button>
+                    </Link>
+                    <Link
+                      target="blank"
+                      to="https://www.linkedin.com/in/bach-long-ab130015b/"
                     >
-                      <FaLinkedinIn
-                        className="text-muted"
-                        style={{ fontSize: "22px" }}
-                      />
-                    </button>
+                      <button
+                        className="   btn  shadow-sm shadow-sm"
+                        style={{ color: "#878e99" }}
+                      >
+                        <FaLinkedinIn
+                          className="text-muted"
+                          style={{ fontSize: "22px" }}
+                        />
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -105,7 +120,7 @@ function App() {
                   </div>
                   <div>
                     <strong className="color-gray">PHONE:</strong> <br></br>{" "}
-                    +84363632015
+                    +84 336 863 685
                   </div>
                 </div>
                 <div className="header-right_right col-lg-12 col-xl-6 col-md-6 ">
